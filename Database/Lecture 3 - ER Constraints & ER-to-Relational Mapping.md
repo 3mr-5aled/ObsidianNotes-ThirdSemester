@@ -111,10 +111,12 @@ Defines both minimum and maximum participation:
 > [!tip]
 > UML class diagrams can represent ER concepts while integrating object-oriented features like inheritance and associations.
 
+![[Pasted image 20251027223652.png]]
+
 ---
 # 7️⃣ Chapter 7
 ## 🧮 ER-to-Relational Mapping Algorithm
-
+![[Pasted image 20251027223307.png]]
 > [!note]
 > Converts conceptual ER schema into relational schema for implementation in a relational DBMS.
 
@@ -125,6 +127,8 @@ Defines both minimum and maximum participation:
 
 > [!example]
 > `EMPLOYEE(SSN, Name, Address, ...)`
+
+![[Pasted image 20251027223448.png]]
 
 ---
 
@@ -137,6 +141,8 @@ Defines both minimum and maximum participation:
 > `DEPENDENT(ESSN, Dependent_Name, Relationship)`  
 > PK = {ESSN, Dependent_Name}
 
+![[Pasted image 20251027223509.png]]
+
 ---
 
 ### Step 3: Mapping Binary 1:1 Relationships 🟡 Intermediate
@@ -147,6 +153,8 @@ Three approaches:
 
 > [!example]
 > **MANAGES** → `DEPARTMENT(DNUMBER, DNAME, MSSN, Start_Date)`
+
+![[Pasted image 20251027224611.png]]
 
 ---
 
@@ -160,6 +168,9 @@ Three approaches:
 > [!tip]
 > “Many side gets the key.”
 
+![[Pasted image 20251027230444.png]]
+![[Pasted image 20251027230427.png]]
+
 ---
 
 ### Step 5: Mapping Binary M:N Relationships 🟡 Intermediate
@@ -171,6 +182,9 @@ Three approaches:
 > [!example]
 > `WORKS_ON(ESSN, PNO, HOURS)`  
 > PK = {ESSN, PNO}
+
+![[Pasted image 20251027230456.png]]
+![[Pasted image 20251027230504.png]]
 
 ---
 
@@ -184,6 +198,9 @@ Three approaches:
 > [!example]
 > `DEPT_LOCATIONS(DNUMBER, DLOCATION)`
 
+![[Pasted image 20251027230514.png]]
+![[Pasted image 20251027230521.png]]
+
 ---
 
 ### Step 7: Mapping N-ary (≥3) Relationship Types 🔴 Advanced
@@ -195,6 +212,14 @@ Three approaches:
 > [!example]
 > `SUPPLY(SNAME, PARTNO, PROJNAME)`  
 > PK = {SNAME, PARTNO, PROJNAME}
+
+**Example of a ternary relationship**
+![[Pasted image 20251027230616.png]]
+
+###### ER to relation mapping
+![[Pasted image 20251027230649.png]]
+![[Pasted image 20251027230657.png]]
+
 
 ---
 
@@ -221,7 +246,7 @@ mindmap
     Constraints
       Cardinality Ratio
       Participation Constraint
-      (min,max) Notation
+      min,max Notation
     Mapping Steps
       Regular Entities
       Weak Entities
@@ -290,3 +315,171 @@ mindmap
 * TutorialsPoint – *ER to Relational Mapping*
 * YouTube: *Database Design – ER to Relational Mapping (Neso Academy)*
 * W3Schools SQL Schema Design Guide
+---
+## 🧠 Simplified Steps of ER-to-Relational Mapping (Egyptian Arabic Style)
+
+> [!note]
+> الهدف من التحويل ده إننا ناخد **ER Diagram** اللي فيها entities وrelationships ونحوّلها لــ **Relational Schema** نقدر نطبّقها في قاعدة بيانات SQL.  
+> يعني ببساطة: “كل Entity تبقى Table، وكل Relationship تتحول إلى مفاتيح أو جدول جديد حسب نوعها”.
+
+---
+
+## 🧩 Step 1: Regular Entities (الكيانات العادية)
+
+> [!note]
+> أي **Strong Entity** بنعملها **Table** لوحدها.
+
+- نحط كل الـ **simple attributes** فيها.
+- نختار منها **Primary Key (PK)**.
+- لو الـ PK مركّب، يبقى نجمع attributes بتاعته كلها.
+
+🧱 Example:  
+`EMPLOYEE(SSN, Name, Address, Salary)`  
+→ **SSN** هو الـ Primary Key.
+
+> [!tip]
+> 🎓 Mnemonic: **"Each strong stands alone."**  
+> يعني كل كيان قوي بيبقى جدول لوحده.
+
+---
+
+## 🧩 Step 2: Weak Entities (الكيانات الضعيفة)
+
+> [!note]
+> الـ Weak Entity ما ينفعش تعيش من غير الـ Owner، فبتاخد **FK** منه وتضمها لمفتاحها.
+
+- نعمل Table فيها attributes الخاصة بيها + **FK** من الـ Owner.
+- **Primary Key = Partial Key + FK**.
+
+🧱 Example:  
+`DEPENDENT(ESSN, Dependent_Name, Relationship)`  
+**ESSN** ← جاي من `EMPLOYEE(SSN)`  
+**PK = ESSN + Dependent_Name**
+
+> [!tip]
+> 🎓 Mnemonic: **"Weak borrows key from strong."**
+
+---
+
+## 🧩 Step 3: Binary 1:1 Relationships (علاقة واحد لواحد)
+
+> [!note]
+> في علاقة **1:1** عندنا 3 اختيارات:
+> 1. نحط **FK** في الكيان اللي عنده **total participation**.  
+> 2. ندمج الكيانين في **Table واحدة** لو الاتنين total.  
+> 3. نعمل **Table جديدة** للعلاقة.
+
+🧱 Example:  
+`DEPARTMENT(DNUMBER, DNAME, MSSN, Start_Date)`  
+**MSSN** بيربطها بـ `EMPLOYEE(SSN)` اللي هو المدير.
+
+> [!tip]
+> 🎓 Mnemonic: **"Put FK where everyone must appear."**
+
+---
+
+## 🧩 Step 4: Binary 1:N Relationships (علاقة واحد لمجموعة)
+
+> [!note]
+> في علاقة **1:N** نحط **FK** بتاع “1” في جدول “N”.
+
+🧱 Example:  
+`EMPLOYEE(DNO)` ← **DNO** جاي من `DEPARTMENT(DNUMBER)`  
+يعني كل موظف بيتبع قسم واحد.
+
+> [!tip]
+> 🎓 Mnemonic: **"Many gets the key."**
+
+---
+
+## 🧩 Step 5: Binary M:N Relationships (علاقة متعدد لمتعدد)
+
+> [!note]
+> علاقة **Many-to-Many** لازم تتحول لــ **New Table**.
+
+- نحط **FKs** من الكيانين.
+- نضيف أي **Attributes** خاصة بالعلاقة.
+- **PK = combination of FKs**.
+
+🧱 Example:  
+`WORKS_ON(ESSN, PNO, HOURS)`  
+**ESSN** ← Employee  
+**PNO** ← Project  
+**HOURS** ← Attribute للعلاقة
+
+> [!tip]
+> 🎓 Mnemonic: **"M:N makes a new table."**
+
+---
+
+## 🧩 Step 6: Multivalued Attributes (الصفات متعددة القيم)
+
+> [!note]
+> لو attribute ليه أكتر من قيمة، بنعمله **Table جديدة**.
+
+- نحط:
+  - الـ Attribute نفسه.
+  - **FK** من الجدول الأصلي.
+- **PK = {FK + Attribute}**
+
+🧱 Example:  
+`DEPT_LOCATIONS(DNUMBER, DLOCATION)`  
+القسم ممكن يكون ليه أكتر من مكان.
+
+> [!tip]
+> 🎓 Mnemonic: **"Multi means many rows."**
+
+---
+
+## 🧩 Step 7: N-ary Relationships (العلاقات الثلاثية أو أكتر)
+
+> [!note]
+> لو العلاقة فيها أكتر من كيانين (3 أو أكتر)، نعمل **New Table** فيها:
+  - **FKs** لكل الكيانات.
+  - أي attributes خاصة بالعلاقة.
+  - **PK = كل الـ FKs مع بعض.**
+
+🧱 Example:  
+`SUPPLY(SNAME, PARTNO, PROJNAME)`  
+يعني supplier بيورد parts لمشاريع.
+
+> [!tip]
+> 🎓 Mnemonic: **"N-ary needs new relation."**
+
+---
+
+## 🧭 Study Aid Summary Table
+
+| Step | Type | What to Do | Mnemonic |
+|------|------|-------------|-----------|
+| 1 | Regular Entity | Create a table with PK | Each strong stands alone |
+| 2 | Weak Entity | Add FK + partial key | Weak borrows key from strong |
+| 3 | 1:1 Relationship | FK / Merge / New Table | Put FK where everyone must appear |
+| 4 | 1:N Relationship | FK on N-side | Many gets the key |
+| 5 | M:N Relationship | New Table | M:N makes a new table |
+| 6 | Multivalued Attribute | New Table | Multi means many rows |
+| 7 | N-ary Relationship | New Table | N-ary needs new relation |
+
+---
+
+## 🧠 Concept Diagram (Mermaid Visualization)
+
+```mermaid
+mindmap
+  root((ER-to-Relational Mapping))
+    Step 1 Regular Entity
+      "Make a table"
+    Step 2 Weak Entity
+      "Add FK + partial key"
+    Step 3 1:1 Relationship
+      "Choose FK / Merge / Relation"
+    Step 4 1:N Relationship
+      "Put FK on N-side"
+    Step 5 M:N Relationship
+      "Create new relation"
+    Step 6 Multivalued Attribute
+      "Separate table for each value"
+    Step 7 N-ary Relationship
+      "Table with all FKs"
+```
+
