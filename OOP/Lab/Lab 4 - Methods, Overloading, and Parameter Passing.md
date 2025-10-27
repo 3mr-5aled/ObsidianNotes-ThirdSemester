@@ -481,3 +481,7 @@ mindmap
 ---
 
 > [!tip] Export this note to your Obsidian vault. Use the Mermaid blocks for quick visual review during exam prep.
+
+## Notes
+* Second statement in slide 17
+	Correction : Instance variable/attributes 

@@ -1,1 +1,0 @@
-Diff between `unique(name, email) `And `unique(name); unique(email);`
