@@ -1,4 +1,4 @@
-# DBD – ER Mapping & EER Modeling (Lecture 4, Oct 2025)
+# DBD – ER Mapping & EER Modeling 
 
 ---
 
@@ -193,7 +193,8 @@ There are **three approaches**:
 >   EMPLOYEE --> TECHNICIAN
 > ```
 
-![[Pasted image 20251016115856.png]]
+![[Pasted image 20251027234954.png]]
+
 ---
 
 ### **Attribute Inheritance**
@@ -204,7 +205,8 @@ There are **three approaches**:
 > [!tip]
 > **Inheritance rule:**  
 > If `SECRETARY` is a subclass of `EMPLOYEE`, every `SECRETARY` entity **must** also be an `EMPLOYEE`.
-![[Pasted image 20251016115924.png]]
+
+![[Pasted image 20251027235059.png]]
 
 ---
 
@@ -215,7 +217,7 @@ There are **three approaches**:
 > [!example]
 > `{SECRETARY, ENGINEER, TECHNICIAN}` = specialization of `EMPLOYEE` based on `JobType`.
 
-![[Pasted image 20251016120018.png]]
+![[Pasted image 20251027235200.png]]
 
 ---
 
@@ -233,7 +235,7 @@ There are **three approaches**:
 >   TRUCK --> VEHICLE
 > ```
 
-![[Pasted image 20251016120047.png]]
+![[Pasted image 20251027235217.png]]
 
 ---
 
@@ -244,8 +246,14 @@ There are **three approaches**:
 - **Overlapping (o):** Entity may belong to multiple subclasses.
 
 #### **2. Completeness Constraint**
-- **Total (double line):** Every superclass entity must belong to a subclass.  
+- **Total (double line):** Every superclass entity must belong to a subclass. 
 - **Partial (single line):** Some superclass entities may not belong to any subclass.
+
+
+![[Pasted image 20251027235327.png]]
+![[Pasted image 20251027235336.png]]
+![[Pasted image 20251027235344.png]]
+![[Pasted image 20251027235352.png]]
 
 > [!example]
 > - Disjoint total → every `EMPLOYEE` is either a `MANAGER` or `ENGINEER`, not both.  
@@ -268,8 +276,9 @@ There are **three approaches**:
 >   MANAGER --> ENGINEERING_MANAGER
 > ```
 
----
+![[Pasted image 20251027235436.png]]
 
+---
 ### **Types of Specialization/Generalization**
 
 | Type | Disjointness | Completeness |
@@ -278,10 +287,9 @@ There are **three approaches**:
 | Disjoint Partial | d | Partial |
 | Overlapping Total | o | Total |
 | Overlapping Partial | o | Partial |
-![[Pasted image 20251016121010.png]]
-![[Pasted image 20251016121026.png]]
-![[Pasted image 20251016121037.png]]
 
+
+![[Pasted image 20251027235446.png]]
 
 ---
 
