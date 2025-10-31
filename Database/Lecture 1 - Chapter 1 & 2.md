@@ -270,11 +270,11 @@ Avoid when:
 
 ### 12.2 Schema and Instances 🟢 Basic
 
-|Concept|Description|
-|---|---|
-|**Database Schema**|Structural description of data and constraints|
-|**Schema Construct**|Components of schema (e.g., STUDENT, COURSE)|
-|**Database State (Instance)**|Actual data at a given time|
+| Concept                           | Description                                    |
+| --------------------------------- | ---------------------------------------------- |
+| **Database Schema**               | Structural description of data and constraints |
+| **Schema Construct**              | Components of schema (e.g., STUDENT, COURSE)   |
+| **Database State (==Instance==)** | Actual data at a given time  ( #EXAM )         |
 
 > [!tip]  
 > Schema changes rarely; database state changes frequently with updates.
