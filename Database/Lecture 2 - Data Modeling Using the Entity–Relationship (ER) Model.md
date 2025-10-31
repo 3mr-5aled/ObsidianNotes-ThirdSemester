@@ -62,17 +62,53 @@ tags: [database, lecture, university, notes]
 ![[Pasted image 20251003164257.png]]
 
 ---
+### **ER Model – Core Concepts**
 
+The **Entity–Relationship (ER) Model** is built around three main concepts:  
+**Entities**, **Attributes**, and **Relationships**.
+
+---
+
+#### **1. Entity**
+
+- A **single object** in the real world that can be distinctly identified.
+    
+- Example: A _student_, _car_, or _course_.
+    
+
+---
+
+#### **2. Entity Type**
+
+- The **definition or description** of a group of entities that share the same properties.
+    
+- Represents a **specific thing** in the _mini-world_, which may have:
+    
+    - **Physical existence** (e.g., Employee, Car)
+        
+    - **Conceptual existence** (e.g., Department, Course)
+        
+
+---
+
+#### **3. Entity Set**
+
+- The **collection of all entities** of a particular entity type **currently stored** in the database.
+    
+- Example: All students enrolled this semester form the **Student entity set**.
+---
 ## 🔢 Types of Attributes
 
-| Type              | Description                    | Example                                       |
-| ----------------- | ------------------------------ | --------------------------------------------- |
-| **Simple**        | Atomic value                   | ![[Pasted image 20251027184426.png]]          |
-| **Composite**     | Consists of subcomponents      | ![[Pasted image 20251003164841.png]]          |
-| **Single-valued** | One value per entity           | ![[Pasted image 20251027184438.png]]          |
-| **Multi-valued**  | Multiple values possible       | ![[Pasted image 20251003164917.png]]          |
-| **Derived**       | Computed from other attributes | ![[Pasted image 20251003165030.png]]          |
-| **Stored**        | Physically saved in DB         | BirthDate![[Pasted image 20251027184459.png]] |
+| Type                       | Description                    | Example                                                                                   |
+| -------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------- |
+| **Simple**                 | Atomic value                   | ![[Pasted image 20251027184426.png]]                                                      |
+| **Composite**              | Consists of subcomponents      | ![[Pasted image 20251003164841.png]]                                                      |
+| **Single-valued**          | One value per entity           | ![[Pasted image 20251027184438.png]]                                                      |
+| **Multi-valued**           | Multiple values possible       | ![[Pasted image 20251003164917.png]]                                                      |
+| **Derived**                | Computed from other attributes | ![[Pasted image 20251003165030.png]]                                                      |
+| **Stored**                 | Physically saved in DB         | BirthDate![[Pasted image 20251027184459.png]]                                             |
+| **Complex**                | composite + multi-valued.      | Address + phone number = contact info.                                                    |
+| **Composite in composite** | composite inside a composite   | Address :LiArrowBigRight: street :LiArrowBigRight: (name – number) :LiArrowBigRight: City |
 
 > [!tip]
 > **Mnemonic:**  
@@ -94,10 +130,10 @@ tags: [database, lecture, university, notes]
 ## 🧩 Entity Types and Key Attributes
 
 - **Entity Type:** group of entities with same attributes (e.g., *EMPLOYEE*).
-- **Key Attribute:** uniquely identifies each entity instance.  
+- **Key Attribute:** ~={red}uniquely=~ identifies each entity instance.  
   - Example: **SSN** for *EMPLOYEE*.
 - **Composite Key:** key made up of multiple fields, e.g., `(Number, State)` for *CAR*.
-- **Candidate Keys:** multiple possible keys.
+- **Candidate Keys:** ~={red}multiple=~ possible ~={red}keys=~.
 - **Weak Entity Type:** entity without a key (identified via another entity).
 
 > [!warning]
@@ -135,6 +171,23 @@ tags: [database, lecture, university, notes]
 - A **relationship** relates two or more entities.
 - **Relationship Type:** the schema defining the relationship name, participating entity types, and constraints.
 - **Degree:** number of participating entities (binary, ternary, etc.).
+
+#### Relationship Concepts
+
+- **Relationship:**  
+    A single connection between specific entities.  
+    **Example:** John works on Project X.
+    
+- **Relationship Type:**  
+    The general definition of the relationship.  
+    **Example:** `WORKS-ON`
+    
+- **Relationship Set:**  
+    All actual relationships of the same type that exist in the database.
+    
+- **Recursive Relationship:**  
+    A relationship type involving the same entity type in distinct roles.  
+    **Example:** `SUPERVISION` → **Supervisor** and **Supervisee**
 
 **Examples:**
 - `WORKS_FOR (EMPLOYEE, DEPARTMENT)`
@@ -183,6 +236,12 @@ tags: [database, lecture, university, notes]
 | **1:N** | One to many | DEPARTMENT → PROJECT |
 | **M:N** | Many to many | WORKS_ON |
 | **Participation (Existence Dependency)** | Mandatory or optional | Total (double line), Partial (single line) |
+#### Existence Dependency Constraint (Participation Constraint)
+Defines the **minimum number of relationships** an entity must participate in for its existence to be valid.
+
+- **0 → Optional Participation:** Entity is _not existence-dependent_.
+    
+- **1 or more → Mandatory Participation:** Entity is _existence-dependent_.
 
 > [!example]
 > - **WORKS_ON:** Many EMPLOYEEs work on Many PROJECTs.  

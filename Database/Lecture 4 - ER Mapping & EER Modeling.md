@@ -116,6 +116,8 @@ There are **three approaches**:
   - Relationship’s own attributes.
 - PK = combination of all FKs.
 
+![[Pasted image 20251031203022.png]]
+
 > [!example]
 > `SUPPLY(Sname, Part_no, Proj_name, Quantity)`  
 > - Represents ternary relationship **SUPPLY(SUPPLIER, PART, PROJECT)**  
@@ -177,6 +179,7 @@ There are **three approaches**:
 
 ### **Subclasses and Superclasses**
 - A **subclass** is a subset of entities from a **superclass**.
+- There are called "IS_A" relationship
 - Each subclass may have:
   - **Local attributes** (specific to subclass)
   - **Local relationships**

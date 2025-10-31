@@ -279,6 +279,14 @@ Avoid when:
 > [!tip]  
 > Schema changes rarely; database state changes frequently with updates.
 
+### **Key Database Concepts**
+
+| Term                          | Definition                                                                      | Notes                                                                |
+| ----------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Schema**                    | The structure of the database — defines **tables, columns, and relationships**. | Changes **rarely**. Represents the **blueprint** of the database.    |
+| **Database State (Instance)** | The **actual data** stored in the database **at a specific moment**.            | Changes **frequently** as data is inserted, updated, or deleted.     |
+| **Metadata (Catalog)**        | **Data about data**, describing tables, columns, data types, and constraints.   | Used by the DBMS to **manage and interpret** the database structure. |
+
 ---
 
 ### 12.3 DBMS Languages 🟡 Intermediate

@@ -124,6 +124,7 @@ Defines both minimum and maximum participation:
 - Create a relation **R** for each strong entity.
 - Include all **simple attributes**.
 - Choose **primary key** (or composite if needed).
+- if key is **composite** , all its parts are written not the composite ( Fname , Minit , Lname ).
 
 > [!example]
 > `EMPLOYEE(SSN, Name, Address, ...)`
@@ -147,9 +148,9 @@ Defines both minimum and maximum participation:
 
 ### Step 3: Mapping Binary 1:1 Relationships 🟡 Intermediate
 Three approaches:
-1. **Foreign Key approach** – place FK in entity with **total participation**.
-2. **Merged Relation approach** – merge entities if both sides total.
-3. **Relationship Relation approach** – create new relation for cross-reference.
+1. **Foreign Key approach** – place FK in entity with *total participation*.
+2. **Merged Relation approach** – *merge* entities if *both sides total*.
+3. **Relationship Relation approach** – create *new relation for cross-reference*.
 
 > [!example]
 > **MANAGES** → `DEPARTMENT(DNUMBER, DNAME, MSSN, Start_Date)`
@@ -175,7 +176,7 @@ Three approaches:
 
 ### Step 5: Mapping Binary M:N Relationships 🟡 Intermediate
 - Create new **relation R** for the relationship.
-- Include **FKs of both participating entities**.
+- Include **FKs of both<<<< participating entities**.
 - **PK = combination of both FKs**.
 - Add any **relationship attributes**.
 
@@ -187,7 +188,6 @@ Three approaches:
 ![[Pasted image 20251027230504.png]]
 
 ---
-
 ### Step 6: Mapping Multivalued Attributes 🔴 Advanced
 - Create new relation **R**.
 - Include:
@@ -367,7 +367,7 @@ mindmap
 > في علاقة **1:1** عندنا 3 اختيارات:
 > 1. نحط **FK** في الكيان اللي عنده **total participation**.  
 > 2. ندمج الكيانين في **Table واحدة** لو الاتنين total.  
-> 3. نعمل **Table جديدة** للعلاقة.
+> 3. نعمل **Table جديدة** للعلاقة. ( when both sides are partial participation )
 
 🧱 Example:  
 `DEPARTMENT(DNUMBER, DNAME, MSSN, Start_Date)`  

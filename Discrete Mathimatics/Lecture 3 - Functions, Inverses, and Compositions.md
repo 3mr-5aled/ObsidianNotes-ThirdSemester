@@ -179,6 +179,8 @@ S_n = a * (r**(n+1) - 1) / (r - 1)
 print(S_n)
 ```
 
+## Summation formulas
+![[Pasted image 20251031210139.png]]
 ---
 
 ## 📘 Glossary
