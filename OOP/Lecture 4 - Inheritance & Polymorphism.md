@@ -267,3 +267,7 @@ if (p instanceof Student) {
 
 #QUESTION_NEED_ANSWER
 * How `product coffee drinkingproduct` Is working will product is abstract?
+
+Notes :
+
+Upcasting(boxing)

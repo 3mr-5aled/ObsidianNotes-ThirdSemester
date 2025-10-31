@@ -283,9 +283,9 @@ Avoid when:
 
 ### 12.3 DBMS Languages 🟡 Intermediate
 
-- **DDL (Data Definition Language):** Defines schemas, constraints, and structure.
+- **DDL (Data Definition Language):** Defines schemas, constraints, and structure. ( works on columns and tables )
     
-- **DML (Data Manipulation Language):** Used for querying and updating data.
+- **DML (Data Manipulation Language):** Used for querying and updating data. ( works on data in rows)
     
 
 > [!example]  
