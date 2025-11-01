@@ -208,8 +208,8 @@ $$xy + x’z + yz = xy + x’z$$
 > **Simplification Rule:** Redundant term yz can be eliminated.
 
 > [!Mnemonic]
-> **“If two terms share a middle friend, drop the middle.”**  
-> Here, **y** is the “middle friend” shared by **x** and **z**.
+> When one term uses **x** and another uses **x′**,
+>  the **common friend (y z)** is **useless**.
 
 ---
 
