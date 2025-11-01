@@ -182,7 +182,7 @@ Examples:
 
 ---
 
-## 🔗 10. Inter-base Conversions
+## 🔗 10. Integer-base Conversions
 
 ### Binary ↔ Octal  
 - Group bits in **3s**
@@ -205,13 +205,23 @@ Examples:
 ---
 
 ## 🧠 11. Binary System Units
+> Digits in a binary number are called bits.
 
-| Unit | Power of 2 | Name | Example |
-|------|-------------|------|----------|
-| 2¹⁰ | Kilo (K) | 1 K = 1024 |
-| 2²⁰ | Mega (M) | 1 M = 1,048,576 |
-| 2³⁰ | Giga (G) | 1 G = 1,073,741,824 |
-| 2⁴⁰ | Tera (T) | 1 T = 1,099,511,627,776 |
+Computer capacity is usually given in bytes. A byte is equal to
+eight bits and can accommodate
+
+| Unit  | Power of 2   | Bytes                            | also     |
+| ----- | ------------ | -------------------------------- | -------- |
+| $2^0$ | Bit          | 0,1                              |          |
+| $2^3$ | Byte         | 8 bits                           |          |
+| 2¹⁰   | KiloByte (K) | 1 Kb = 1024 *bytes*              |          |
+| 2²⁰   | MegaByte (M) | 1 Mb = 1,048,576 *bytes*         | 1024 Kb  |
+| 2³⁰   | GigaByte (G) | 1 Gb = 1,073,741,824 *bytes*     | 1024  Mb |
+| 2⁴⁰   | TeraByte (T) | 1 Tb = 1,099,511,627,776 *bytes* | 1024 Gb  |
+### Binary system range
+>from **0** to $2^{\ Number\ of\ bits } - 1$ 
+
+![[Pasted image 20251101114331.png]]
 
 🟢 **Basic**
 

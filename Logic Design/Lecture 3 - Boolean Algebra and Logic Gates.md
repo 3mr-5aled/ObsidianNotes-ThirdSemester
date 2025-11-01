@@ -1,190 +1,276 @@
-# DLD – Boolean Algebra and Logic Gates (Lecture 3, 10/10/2025)
+---
+lecture: Boolean Algebra and Logic Gates – Canonical and Standard Forms
+date: 2025-11-01
+tags:
+  - logic-design
+  - boolean-algebra
+  - lecture
+  - notes
+---
+# 🧠 Logic Design – Boolean Algebra and Logic Gates
 
-## Complement of a Function
-
-The **complement of a function** $F$, denoted as $F'$, is found by **interchanging the 0s and 1s** in the function's output values.
-
-A generalized method for finding the complement, based on **De Morgan’s theorem**, is to **interchange AND and OR operators** and **complement each literal**.
-
-- If $F = A + B + C + \dots$, then $F' = A'B'C'\dots$
-- If $F = ABC\dots$, then $F' = A' + B' + C' + \dots$
+> [!note] **Overview**  
+> This lecture explains **Boolean function complementation**, **canonical and standard forms**, **minterms**, **maxterms**, and **conversion between SOP and POS**. It introduces methods for expressing and simplifying Boolean functions for digital circuit design.
 
 ---
 
-> [!example] **Finding the Complement**
+## 🔄 Complement of a Boolean Function
 
-1️⃣ **Find the complement of** $F_1 = x'yz' + x'y'z$
+> [!note]  
+> **Definition:**  
+> The **complement** of a Boolean function **F**, denoted **F′**, is obtained by interchanging **0 ↔ 1** in the output of F.
 
-$$
-\begin{aligned}
-F_1' &= (x'yz' + x'y'z)' \\
-     &= (x'yz')' \cdot (x'y'z)' \\
-     &= (x + y' + z)(x + y + z')
-\end{aligned}
-$$
-
----
-
-2️⃣ **Find the complement of** $F_2 = x(y'z' + yz)$
-
-$$
-\begin{aligned}
-F_2' &= [x(y'z' + yz)]' \\
-     &= x' + (y'z' + yz)' \\
-     &= x' + (y'z')' \cdot (yz)' \\
-     &= x' + (y + z)(y' + z') \\
-     &= x' + yz' + y'z
-\end{aligned}
-$$
-
----
-
-## Canonical and Standard Forms
-
-Boolean functions can be expressed in several forms.  
-The **canonical forms** are a unique representation of the function.
-
----
-
-### **Minterms**
-
-> [!info] **Definition: Minterm**  
-> A **minterm**, or **standard product**, is an AND term that contains all variables of the function, either in their normal or complemented form.  
-> For $n$ variables, there are $2^n$ possible minterms.
-
-- A minterm evaluates to **1** for only one specific combination of variable values.  
-- The designation $m_j$ is used, where $j$ is the decimal equivalent of the binary combination for which the minterm is 1.
-
----
-
-#### **Minterms for Three Variables ($x, y, z$):**
-
-| x | y | z | Term | Designation |
+|x|y|z|F|F′|
 |---|---|---|---|---|
-| 0 | 0 | 0 | $x'y'z'$ | $m_0$ |
-| 0 | 0 | 1 | $x'y'z$ | $m_1$ |
-| 0 | 1 | 0 | $x'yz'$ | $m_2$ |
-| 0 | 1 | 1 | $x'yz$ | $m_3$ |
-| 1 | 0 | 0 | $xy'z'$ | $m_4$ |
-| 1 | 0 | 1 | $xy'z$ | $m_5$ |
-| 1 | 1 | 0 | $xyz'$ | $m_6$ |
-| 1 | 1 | 1 | $xyz$ | $m_7$ |
+|0|0|0|0|1|
+|0|0|1|1|0|
+|0|1|0|1|0|
+|0|1|1|1|0|
+|1|0|0|0|1|
+|1|0|1|0|1|
+|1|1|0|1|0|
+|1|1|1|0|1|
 
-A Boolean function can be expressed algebraically as a **sum of minterms**.  
-This is the **Sum of Products (SOP)** canonical form — the function equals the **OR** of all minterms corresponding to `1` in the truth table.
+> [!example]  
+> **Generalization using De Morgan’s laws:**
+> 
+> - If $F = A + B + C$, then $F' = A'B'C'$
+>     
+> - If $F = ABC$, then $F' = A' + B' + C'$
+>     
 
----
+### Worked Examples
 
-> [!example] **Sum of Minterms**
-
-Given the function $F(x, y, z)$ which is `1` for binary combinations **001**, **100**, and **111**:
-
-- The corresponding minterms are $m_1, m_4, m_7$
-- The function is $F = x'y'z + xy'z' + xyz$
-- Compact notation: $F(x, y, z) = \Sigma(1, 4, 7)$
-
----
-
-### **Maxterms**
-
-> [!info] **Definition: Maxterm**  
-> A **maxterm**, or **standard sum**, is an OR term that contains all variables of the function, either in their normal or complemented form.  
-> For $n$ variables, there are $2^n$ possible maxterms.
-
-- A maxterm evaluates to **0** for only one specific combination of variable values.  
-- Each maxterm is the **complement** of its corresponding minterm ($M_j = m_j'$).
+> [!example]  
+> **Example 1**  
+> $F_1 = x′yz′ + x′y′z$  
+> $F_1′ = (x + y′ + z)(x + y + z′)$
+> 
+> **Example 2**  
+> $F_2 = x(y′z′ + yz)$  
+> $F_2′ = x′ + yz′ + y′z$
 
 ---
 
-#### **Maxterms for Three Variables ($x, y, z$):**
+## 🧩 Canonical and Standard Forms
 
-| x | y | z | Term | Designation |
-|---|---|---|---|---|
-| 0 | 0 | 0 | $x + y + z$ | $M_0$ |
-| 0 | 0 | 1 | $x + y + z'$ | $M_1$ |
-| 0 | 1 | 0 | $x + y' + z$ | $M_2$ |
-| 0 | 1 | 1 | $x + y' + z'$ | $M_3$ |
-| 1 | 0 | 0 | $x' + y + z$ | $M_4$ |
-| 1 | 0 | 1 | $x' + y + z'$ | $M_5$ |
-| 1 | 1 | 0 | $x' + y' + z$ | $M_6$ |
-| 1 | 1 | 1 | $x' + y' + z'$ | $M_7$ |
+> [!note]  
+> **Canonical Form:**  
+> Boolean functions expressed as a **sum of minterms (SOP)** or a **product of maxterms (POS)**.  
+> Each term contains **all variables**, either in true or complemented form.
 
-A Boolean function can be expressed as a **product of maxterms**.  
-This is the **Product of Sums (POS)** canonical form — the function equals the **AND** of all maxterms corresponding to `0` in the truth table.
+### Example: Truth Table Construction
 
----
+|x|y|Function|Result|
+|---|---|---|---|
+|0|0|x′y′|1|
+|0|1|x′y|1|
+|1|0|xy′|1|
+|1|1|xy|1|
 
-> [!example] **Product of Maxterms**
-
-Given $F(x, y, z) = \Sigma(1, 4, 7)$,  
-the function is `0` for minterms $m_0, m_2, m_3, m_5, m_6$.
-
-- Corresponding maxterms: $M_0, M_2, M_3, M_5, M_6$
-- Function: $F = (x + y + z)(x + y' + z)(x + y' + z')(x' + y + z')(x' + y' + z)$
-- Compact form: $F(x, y, z) = \Pi(0, 2, 3, 5, 6)$
+Thus:  
+$$ F = x′y′ + x′y + xy′ + xy = 1 $$
 
 ---
 
-### **Conversion Between Canonical Forms**
+### Minterms
 
-> [!tip] **Conversion Rule**  
-> To convert between **Sum of Minterms** and **Product of Maxterms**,  
-> interchange the symbols $\Sigma$ and $\Pi$ and list the numbers **missing** from the original form.
+> [!note]  
+> A **minterm** (standard product) is an **AND** term of all variables in either normal or complemented form.  
+> For n variables, there are $2^n$ possible minterms.
 
-**Example:**
+|x|y|Term|Symbol|
+|---|---|---|---|
+|0|0|x′y′|m₀|
+|0|1|x′y|m₁|
+|1|0|xy′|m₂|
+|1|1|xy|m₃|
 
-$$
-F(A, B, C) = \Sigma(1, 4, 5, 6, 7)
-$$
-
-- Missing minterms: 0, 2, 3  
-- Therefore:
-$$
-F(A, B, C) = \Pi(0, 2, 3)
-$$
-
-The **complement** of a function can be found easily from its canonical form:
-
-$$
-F'(A, B, C) = \Sigma(\text{missing minterms})
-$$
-
-So if $F(A, B, C) = \Sigma(1, 4, 5, 6, 7)$,  
-then $F'(A, B, C) = \Sigma(0, 2, 3)$.
-
----
-![[Pasted image 20251010194438.png]]
-
-## Standard vs. Canonical Forms
-
-| **Form**      | **Description**                                                                                        | **Example**                 |
-| ------------- | ------------------------------------------------------------------------------------------------------ | --------------------------- |
-| **Canonical** | Each term (minterm or maxterm) must contain **all variables** of the function.                         | $F_1 = xy'z + xyz' + x'yz'$ |
-| **Standard**  | Terms may contain one, two, or any number of literals. Not all variables must be present in each term. | $F_1 = y' + xy + x'yz'$     |
-
-A non-standard function can be converted to a **standard form** using Boolean algebra (e.g., distributive law).  
-Standard forms are preferred because they simplify circuit implementation.
+**Sum of Minterms:**  
+$$ F = \Sigma(m_0, m_1, m_3) = x′y′ + x′y + xy $$
 
 ---
 
-### **Two-Level Implementation**
+### Maxterms
 
-Standard forms lead directly to **two-level logic gate implementations**:
+> [!note]  
+> A **maxterm** (standard sum) is an **OR** term containing all variables.  
+> There are also $2^n$ maxterms.
 
-- **SOP:** AND gates followed by an OR gate  
-- **POS:** OR gates followed by an AND gate  
+|x|y|Term|Symbol|
+|---|---|---|---|
+|0|0|(x + y)|M₀|
+|0|1|(x + y′)|M₁|
+|1|0|(x′ + y)|M₂|
+|1|1|(x′ + y′)|M₃|
 
 ---
-![[Pasted image 20251010205233.png]]
-## 🧠 **Key Takeaways**
 
-- **Canonical Forms** uniquely represent Boolean functions:
-  - **SOP ($\Sigma$):** OR of minterms (1’s in truth table)
-  - **POS ($\Pi$):** AND of maxterms (0’s in truth table)
-- **Minterm ($m_j$):** AND term that’s 1 for one input combination.
-- **Maxterm ($M_j$):** OR term that’s 0 for one input combination.  
-  $M_j = m_j'$
-- **Standard Forms** (SOP, POS) omit variables when not needed.
-- **Standard forms** → direct **two-level logic implementations.**
+## ⚖️ Relationship Between Minterms and Maxterms
 
-![[Pasted image 20251010205251.png]]
+> [!note]
+> 
+> - Each **maxterm** is the **complement** of its corresponding **minterm**.
+>     
+> - $m_i' = M_i$
+>     
+
+> [!example]  
+> $F = \Sigma(m_1, m_4, m_7) = x′y′z + xy′z′ + xyz$  
+> $F = Π(M₀, M₂, M₃, M₅, M₆) = (x+y+z)(x+y′+z)(x′+y+z′)(x′+y′+z)$
+
+---
+
+## 🔁 Conversions Between Canonical Forms
+
+> [!note]  
+> To convert between forms:
+> 
+> - From **SOP → POS**: list missing indices, change Σ to Π
+>     
+> - From **POS → SOP**: list missing indices, change Π to Σ
+>     
+
+|Function|SOP|POS|
+|---|---|---|
+|F(x,y,z)|Σ(1,3,6,7)|Π(0,2,4,5)|
+|F′(x,y,z)|Σ(0,2,4,5)|Π(1,3,6,7)|
+
+---
+
+## ⚙️ Canonical vs. Standard Forms
+
+|Canonical Form|Standard Form|
+|---|---|
+|All variables appear in each term|Not all variables required|
+|Used in truth table derivation|Used for simplification|
+|Two-level circuit (AND–OR or OR–AND)|Compact, practical circuits|
+
+---
+
+## 🧮 Nonstandard to Standard and Canonical
+
+> [!example]  
+> Given $F = AB + C(B + A)$
+> 
+> - **Standard Form:** $F = AB + AC + BC$
+>     
+> - **Canonical Form:** $F = ABC + ABC′ + A′BC + AB′C$
+>     
+
+> [!tip]  
+> Standard form enables **two-level circuit design**, simplifying hardware implementation.
+
+---
+
+## 💡 Implementation Diagrams
+```mermaid
+mindmap
+  root((Boolean Function))
+    Complement
+      F'
+      De Morgan's Law
+    Canonical Form
+      Minterms
+      Maxterms
+    Standard Form
+      SOP
+      POS
+    Conversion
+      SOP ↔ POS
+```
+
+> [!example]  
+> **Logic Diagram Types**
+> 
+> - **SOP (Sum of Products):** AND → OR
+>     
+> - **POS (Product of Sums):** OR → AND
+>     
+
+```mermaid
+graph LR
+A[x] --> AND1
+B[y] --> AND1
+AND1 --> OR1
+C[z] --> OR1
+OR1((F))
+```
+
+
+![[Pasted image 20251101135538.png]]
+
+---
+
+## 🧩 Hands-On Practice
+
+1. Find F′ for $F = x′yz′ + x′y′z$.
+    
+2. Derive canonical SOP for $F = x + y′z$.
+    
+3. Convert $F = Σ(1,4,5,6,7)$ to its POS form.
+    
+4. Express $F = A + B′C$ as both Σ and Π canonical forms.
+    
+5. Build logic circuit for $F = (x+y)(x+y′)$.
+    
+
+---
+
+## 📚 Continuity with Previous Lectures
+
+This lecture extends Boolean laws and gate behavior from Lecture 2. It formalizes function representation needed for **K-map simplification** and **digital circuit synthesis** in later topics.
+
+---
+
+## 🧾 Glossary
+
+- **Minterm:** AND term that yields 1 for one specific input combination.
+    
+- **Maxterm:** OR term that yields 0 for one specific input combination.
+    
+- **Canonical Form:** Expression where every term includes all variables.
+    
+- **Standard Form:** Simplified SOP or POS expression.
+    
+- **De Morgan’s Law:** Converts complement of AND ↔ OR.
+    
+
+---
+
+## 🎯 Key Takeaways
+
+- Boolean functions can be expressed as **SOP (Σ)** or **POS (Π)**.
+    
+- Each **minterm ↔ unique combination** where F=1.
+    
+- Each **maxterm ↔ unique combination** where F=0.
+    
+- **Complementation** interchanges Σ and Π lists.
+    
+- **Canonical → Standard → Simplified** → efficient hardware design.
+    
+
+---
+
+## 🧠 Quick Review Card
+
+|Q|A|
+|---|---|
+|What is a minterm?|AND of all literals for one truth table row that yields 1.|
+|How to find F′ from Σ?|Replace Σ with Π and list missing indices.|
+|Relation between mᵢ and Mᵢ?|$m_i′ = M_i$|
+|Why prefer standard form?|Enables two-level hardware realization.|
+|Example of canonical SOP?|$F = Σ(1,4,5,6,7)$|
+
+---
+
+## 🔗 Further Resources
+
+- M. Morris Mano, _Digital Design_, 6th Edition
+    
+- Floyd, _Digital Fundamentals_
+    
+- MIT OCW: _Digital Systems Lecture 3 – Boolean Algebra and Logic Gates_
+    
+- YouTube: “Karnaugh Maps and Canonical Forms Tutorial”

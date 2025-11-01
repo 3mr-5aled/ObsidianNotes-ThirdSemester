@@ -1,151 +1,364 @@
-# 📚 Lecture 2: Arithmetic Operations, Boolean Algebra and Logic Gates
+---
+course: Logic Design
+lecture: Arithmetic Operations, Boolean Algebra, and Logic Gates
+date: 2025-11-01
+tags:
+  - logic-design
+  - arithmetic
+  - boolean-algebra
+  - digital-logic
+  - university
+  - notes
+---
 
-* **Source:** Digital Logic Design  
-* **Instructor:** Mirvat Al-Qutt, Ph.D  
-* **Department:** Computer Systems Department, FCIS, Ain Shams University  
+# 🧠 Logic Design – Arithmetic Operations, Boolean Algebra, and Logic Gates
+
+> [!note]  
+> This lecture introduces arithmetic operations in various number systems, complements in binary arithmetic, and foundational principles of Boolean algebra and logic gates used in digital circuit design.
 
 ---
 
-## Part 1: Arithmetic Operations
+## 🔗 Continuity with Previous Lectures
 
-Arithmetic operations with numbers in base $r$ follow the same rules as for decimal numbers (base 10). When performing operations in any base, use only the $r$-allowable digits.
-
-### Addition
-When the sum of a column is equal to or greater than the base, subtract multiples of the base from the sum, record the remainder, and **carry** to the next column to the left.
-
-#### Binary Addition (Base 2)
-Rules:
-* $0 + 0 = 0$
-* $0 + 1 = 1$
-* $1 + 0 = 1$
-* $1 + 1 = (2)_{10} = (01)_2$ → result = 0, carry = 1
-* $1 + 1 + 1 = (3)_{10} = (11)_2$ → result = 1, carry = 1
-
-#### Addition Examples
-|   Operation   | Base |         Example         |     Sum     | Carry Row |
-| :-----------: | :--: | :---------------------: | :---------: | :-------: |
-| Decimal-style |  10  |      $3758 + 4657$      |    8415     |    111    |
-|    Binary     |  2   |    $110111 + 011100$    |  $1010011$  |   1111    |
-|  Hexadecimal  |  16  | $7C39_{16} + 37F2_{16}$ | $B42B_{16}$ |    11     |
-|     Octal     |  8   |    $6437_8 + 2510_8$    |  $11147_8$  |    11     |
+> [!note]  
+> Builds upon number system concepts introduced earlier, extending them to arithmetic operations, complements, and their logical implementation using Boolean algebra.
 
 ---
 
-### Subtraction
-When you can’t subtract in a column, **borrow** from the next higher column.
+## 1. Arithmetic Operations 🧮
 
-#### Binary Subtraction
-In binary, you borrow **2 units** (because base = 2), add that to the column you are subtracting from.
+### 1.1 Addition
 
-* **Example:** $110011_2 - 011100_2 = 10111_2$
+> [!note]  
+> Arithmetic in base-r systems follows the same rules as decimal but with digits limited to r-allowable values.
 
----
+**Rule:**  
+When the sum of a column ≥ base, subtract multiples of the base and carry one to the next column.
 
-## Part 2: Complements
+#### Binary Addition Rules
 
-Two complement systems exist per base-$r$ system:
-- **Diminished Radix Complement** ($(r-1)$’s Complement)  
-- **Radix Complement** ($r$’s Complement)
+|Operation|Result|Carry|
+|---|---|---|
+|0 + 0|0|0|
+|0 + 1 / 1 + 0|1|0|
+|1 + 1|0|1|
+|1 + 1 + 1|1|1|
 
-### Diminished Radix Complement ($(r-1)$’s Complement)
-For an $n$-digit number $N$ in base $r$:
-$$(r^n - 1) - N$$
-
-* **1’s Complement (Binary, $r=2$):**  
-  Flip all bits (0 → 1, 1 → 0).  
-  Example: 1’s complement of $(10110000)_2 = (01001111)_2$.
-
-### Radix Complement ($r$’s Complement)
-For an $n$-digit number $N$ in base $r$:
-- If $N \ne 0$: $r^n - N$
-- If $N = 0$: complement = 0
-
-* **2’s Complement (Binary):**  
-  Method 1: Take 1’s complement, then add 1.  
-  Method 2: Toggle all bits left of the least significant ‘1’.  
-  Example: 2’s complement of $10110000 = 01010000$.
-
-### Subtraction with Complements: $M - N$
-| Method | Steps |
-| :---: | :--- |
-| **1’s Complement** | 1. Compute 1’s complement of $N$. <br>2. Add $M + (\text{1’s comp of }N)$. <br>3. If carry, add it to sum. <br>4. If no carry, result = negative of 1’s complement of sum. |
-| **2’s Complement** | 1. Compute 2’s complement of $N$. <br>2. Add $M + (\text{2’s comp of }N)$. <br>3. If carry, discard it. <br>4. If no carry, result = negative of 2’s complement of sum. |
+> [!example]  
+> Example:  
+> $110111_2 + 011100_2 = 1011011_2$
 
 ---
 
-## Part 3: Boolean Algebra and Logic Gates
+### 1.2 Subtraction
 
-Boolean algebra is essential for simplifying circuits. Simpler circuits cost less and are more reliable.
+> [!note]  
+> In binary subtraction, borrow from the left column when needed. The borrowed value equals the base (2).
 
-### Axiomatic Definition & Postulates
-Boolean algebra was developed by **George Boole** and formalized via Huntington’s postulates.
-
-- **Domain:** $B = \{0,1\}$
-- **Operators:** OR (+), AND (·)
-
-| Postulate | OR Form | AND Form |
-| :---: | :---: | :---: |
-| Identity | $x + 0 = x$ | $x \cdot 1 = x$ |
-| Complement | $x + x' = 1$ | $x \cdot x' = 0$ |
-| Commutative | $x + y = y + x$ | $xy = yx$ |
-| Associative | $x + (y + z) = (x + y) + z$ | $x(yz) = (xy)z$ |
-| Distributive | $x + yz = (x + y)(x + z)$ | $x(y + z) = xy + xz$ |
+> [!example]  
+> Example:  
+> $110011_2 - 11100_2 = 100111_2$
 
 ---
 
-### Theorems & Properties
-| Theorem | OR Form | AND Form |
-| :---: | :---: | :---: |
-| Idempotence | $x + x = x$ | $x \cdot x = x$ |
-| Null Elements | $x + 1 = 1$ | $x \cdot 0 = 0$ |
-| Involution | $(x')' = x$ | — |
-| Absorption | $x + x y = x$ | $x(x + y) = x$ |
-| De Morgan’s | $(x + y)' = x' y'$ | $(x y)' = x' + y'$ |
-| Consensus | $xy + x'z + yz = xy + x'z$ | $(x + y)(x' + z)(y + z) = (x + y)(x' + z)$ |
+### 1.3 Operations in Other Bases
 
-#### Operator Precedence
-1. Parentheses  
-2. NOT ($'$)  
-3. AND (·)  
+|Base|Example|Description|
+|---|---|---|
+|Octal|375₈ + 465₈|Use base-8 digits (0–7)|
+|Hexadecimal|A7₁₆ + F5₁₆|Use base-16 digits (0–9, A–F)|
+
+---
+
+## 2. Complements 🔁
+
+> [!note]  
+> Complements simplify subtraction and error detection in digital systems.
+
+### 2.1 Diminished Radix Complement (r−1)’s Complement
+
+Formula:  
+$$(r^n − 1) − N$$
+
+### 2.2 Radix Complement (r’s Complement)
+
+Formula:  
+$$r^n − N = [(r^n − 1) − N] + 1$$
+
+---
+
+### 2.3 Binary Complements
+
+#### 1’s Complement (Diminished Radix)
+
+> [!note]  
+> Flip all bits: 0 → 1, 1 → 0.
+
+> [!example]  
+> (10110000)₂ → (01001111)₂
+
+#### 2’s Complement (Radix)
+
+> [!note]  
+> Take the 1’s complement and add 1.
+
+> [!example]  
+> Number: 01010000  
+> 1’s Comp: 10101111  
+> 2’s Comp: 10110000
+
+> [!tip]  
+> **Mnemonic:** “Flip all bits, then add one.”
+
+---
+
+### 2.4 Subtraction Using Complements
+
+#### Using 1’s Complement
+
+1. Take 1’s complement of subtrahend.
+    
+2. Add it to the minuend.
+    
+3. If carry → add it to LSB.
+    
+4. If no carry → take 1’s complement of the result and prefix a negative sign.
+    
+
+#### Using 2’s Complement
+
+1. Take 2’s complement of subtrahend.
+    
+2. Add it to the minuend.
+    
+3. If carry → discard.
+    
+4. If no carry → take 2’s complement of result and prefix a negative sign.
+    
+
+---
+
+## 3. Boolean Algebra and Logic Gates ⚙️
+
+> [!note]  
+> Boolean algebra provides a mathematical foundation for digital circuit simplification and logical analysis.
+
+### 3.1 Definition of Algebra
+
+- **Algebra:** Set of elements, operators, and axioms.
+    
+- **Binary operators:** Two inputs (AND, OR).
+    
+- **Unary operator:** One input (NOT).
+    
+
+---
+
+### 3.2 Boolean Algebra
+
+Developed by **George Boole (1854)**, formalized by **Huntington (1904)**.
+
+**Set:** B = {0, 1}  
+**Operations:** ( + ) for OR, ( · ) for AND
+
+> [!note]  
+> **Literal:** Variable or its complement.  
+> **Product term:** literals connected by (·).  
+> **Sum term:** literals connected by (+).
+
+---
+
+### 3.3 Postulates of Boolean Algebra 🟢 Basic
+
+|Property|Expression|Description|
+|---|---|---|
+|Closure|Valid for + and ·|Operations stay in set B|
+|Identity|x + 0 = x, x·1 = x|Identity elements|
+|Complement|x + x’ = 1, x·x’ = 0|Negation rules|
+|Commutative|x + y = y + x|Order doesn’t matter|
+|Associative|(x + y) + z = x + (y + z)|Grouping doesn’t matter|
+|Distributive|x·(y + z) = (x·y) + (x·z)|AND distributes over OR|
+
+---
+
+### 3.4 Duality Principle 🟡 Intermediate
+
+> [!note]  
+> Swap OR ↔ AND and 0 ↔ 1 in any valid expression to obtain another valid one.
+
+---
+
+### 3.5 DeMorgan’s Theorems 🟡 Intermediate
+
+|Law|Expression|Dual Form|
+|---|---|---|
+|First|(x + y)’ = x’y’|—|
+|Second|(x·y)’ = x’ + y’|—|
+
+> [!example]  
+> Truth table verification confirms both expressions are equivalent.
+
+---
+
+### 3.6 Consensus Theorem 🟡 Intermediate
+
+$$xy + x’z + yz = xy + x’z$$
+
+> [!tip]  
+> **Simplification Rule:** Redundant term yz can be eliminated.
+
+> [!Mnemonic]
+> **“If two terms share a middle friend, drop the middle.”**  
+> Here, **y** is the “middle friend” shared by **x** and **z**.
+
+---
+
+### 3.7 Operator Precedence
+
+1. Parentheses
+    
+2. NOT (')
+    
+3. AND (·)
+    
 4. OR (+)
+    
+
+> [!example]  
+> $x·y’ + z$ → Evaluate NOT, then AND, then OR.
 
 ---
 
-### Boolean Functions & Logic Gates
+## 4. Boolean Functions 🔴 Advanced
 
-A **Boolean function** uses binary variables, OR, AND, NOT, and parentheses.  
-It can be expressed in multiple Boolean expressions or circuit (gate) diagrams.  
-Each function corresponds to a **unique truth table** of size $2^n$ (for $n$ variables).  
-**Simplification** reduces gates and input lines.
+> [!note]  
+> Boolean functions describe logical relationships using binary variables and operations.
 
-Below is a **logic gate reference diagram** you can embed or link:
+Example:  
+$$F_1 = xyz', \quad F_2 = x + y'z, \quad F_3 = x'y'z + x'yz + xy'$$
 
-> ![[Pasted image 20251004195038.png]]  
-> Or use these sample diagrams:  
-> - [Logic gates with truth tables](https://schoolphysics.co.uk/age16-19/Electronics/Logic%20gates/text/Logic_gates/index.html)   
-> - [Various logic gates diagram](https://circuitglobe.com/logic-gates.html)   
+### Representations
 
-Below is the gate summary table:
-
-| Gate Name | Boolean Expression | Output Condition |
-| :---: | :---: | :---: |
-| **AND** | $F = x \cdot y$ | 1 only when both inputs = 1 |
-| **OR** | $F = x + y$ | 1 when either or both inputs = 1 |
-| **NOT** | $x'$ | Output is inverse of input |
-| **NAND** | $(xy)'$ | 0 only when both inputs = 1 |
-| **NOR** | $(x + y)'$ | 1 only when both inputs = 0 |
-| **XOR** | $x y' + x' y = x \oplus y$ | 1 when inputs differ |
-| **XNOR** | $xy + x'y' = (x \oplus y)'$ | 1 when inputs are same |
+|Type|Description|
+|---|---|
+|Boolean Expression|Many equivalent forms|
+|Truth Table|Unique representation|
+|Logic Diagram|Multiple possible implementations|
 
 ---
 
-### Where to Insert Images in Your Obsidian Note
+### Simplification Examples
 
-You can embed or link images like this in Obsidian:
+1. $F = x(x' + y) = xy$
+    
+2. $F = x + x'y = (x + y)$
+    
+3. $F = (x + y)(x + y') = x$
+    
+4. $F = xy + x’z + yz = xy + x’z$
+    
 
-![[Pasted image 20251004194947.png]]
+> [!tip]  
+> Apply **Consensus Theorem** and **DeMorgan’s Laws** for simplification.
 
+---
 
+## 5. Logic Gates and Implementation 🧩
 
-# Notes
-* Identity element : is element that doesn't affect the mathematical operation
+> [!note]  
+> Logic gates are physical implementations of Boolean operations.
+
+|Gate|Symbol|Expression|Truth Table|
+|---|---|---|---|
+|AND|`·`|F = A·B|1 only if both inputs are 1|
+|OR|`+`|F = A + B|1 if any input is 1|
+|NOT|`'`|F = A’|Inverts input|
+|NAND|—|F = (A·B)’|Inverted AND|
+|NOR|—|F = (A + B)’|Inverted OR|
+|XOR|⊕|F = A⊕B|1 if inputs differ|
+|XNOR|—|F = (A⊕B)’|1 if inputs match|
+
+---
+
+```mermaid
+mindmap
+  root((Arithmetic + Boolean Logic))
+    Arithmetic Operations
+      Addition
+      Subtraction
+      Complements
+    Boolean Algebra
+      Postulates
+      DeMorgan’s Laws
+      Consensus Theorem
+      Operator Precedence
+    Boolean Functions
+      Simplification
+      Logic Gates
+```
+
+---
+
+## 🧩 Hands-On Practice
+
+1. Add $1011_2 + 111_2$ using binary rules.
+    
+2. Compute 2’s complement of $00101100_2$.
+    
+3. Simplify $(x + y)(x + y')$.
+    
+4. Verify DeMorgan’s law with a truth table.
+    
+5. Draw the logic circuit for $F = x'y + xz'$.
+    
+
+---
+
+## 📚 Glossary
+
+|Term|Definition|
+|---|---|
+|**Boolean Algebra**|Algebraic structure over {0,1} with logical operators.|
+|**Complement**|Bitwise inversion of binary values.|
+|**Logic Gate**|Hardware that implements a Boolean operation.|
+|**Radix**|The base of a number system.|
+|**Literal**|A variable or its complement in an expression.|
+
+---
+
+## 🧩 Key Takeaways
+
+- Arithmetic in non-decimal systems follows consistent base-r rules.
+    
+- Complements simplify binary subtraction and representation of negative numbers.
+    
+- Boolean algebra formalizes logical reasoning for circuit design.
+    
+- DeMorgan’s and Consensus theorems aid in circuit simplification.
+    
+- Logic gates implement Boolean functions physically.
+    
+
+---
+
+## 🧠 Quick Review Card
+
+|Q|A|
+|---|---|
+|What is the 2’s complement of 1011₂?|0101₂|
+|Which has higher precedence: AND or OR?|AND|
+|Define Boolean algebra.|System of logical operations over binary values.|
+|What is DeMorgan’s first law?|(x + y)’ = x’y’|
+|Purpose of complements in binary arithmetic?|Simplify subtraction and represent negatives.|
+
+---
+
+## 📖 Further Resources
+
+- M. Morris Mano, _Digital Design_, 6th Edition
+    
+- Floyd, _Digital Fundamentals_
+    
+- Khan Academy: _Binary Arithmetic and Boolean Algebra_
+    
+- Neso Academy (YouTube): _Logic Gates and Boolean Simplification_
