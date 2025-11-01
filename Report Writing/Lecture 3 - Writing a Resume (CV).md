@@ -246,7 +246,7 @@ Use the term “experience.”
 ---
 
 ## Tips for a Remarkable CV
-![[Pasted image 20251009154314.png]]
+![[Pasted image 20251031222350.png]]
 ### Layout Tips
 
 **Do:**

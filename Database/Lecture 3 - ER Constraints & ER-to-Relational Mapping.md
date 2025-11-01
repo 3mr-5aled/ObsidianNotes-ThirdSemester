@@ -10,7 +10,7 @@ tags: [database, lecture, university, notes]
 > This lecture covers **relationship constraints in ER modeling** and the **ER-to-Relational Mapping algorithm**, which converts ER diagrams into relational schemas. It also introduces **n-ary relationships** and their mapping to relations.
 
 ---
-![[Pasted image 20251027192716.png]]
+![[Pasted image 20251027192716.png|700]]
 ## 🔗 Constraints on Relationships
 
 > [!note]
@@ -32,7 +32,7 @@ tags: [database, lecture, university, notes]
 > **MANAGES** (Department–Manager): 1:1  
 > **WORKS_ON** (Employee–Project): M:N
 
-![[Pasted image 20251027192742.png]]
+![[Pasted image 20251027192742.png|700]]
 ### 🟡 Alternative (min, max) Notation
 
 Defines both minimum and maximum participation:
@@ -50,7 +50,7 @@ Defines both minimum and maximum participation:
 > [!note]
 > A relationship can have its own **attributes** describing properties of the association.
 
-![[Pasted image 20251027192853.png]]
+![[Pasted image 20251027192853.png|252]]
 - Example: `HoursPerWeek` in **WORKS_ON**
   - Depends on `(Employee, Project)` pair.
 - Typically used with **M:N relationships**.
@@ -67,7 +67,7 @@ Defines both minimum and maximum participation:
 - **Participation constraint** → total (double line), partial (single line)
 - **Attributes of relationship** → labeled diamond
 
-![[Pasted image 20251027192805.png]]
+![[Pasted image 20251027192805.png|700]]
 
 > [!tip]
 > Remember: *“One side gives the key, many side keeps the key.”*
@@ -111,7 +111,7 @@ Defines both minimum and maximum participation:
 > [!tip]
 > UML class diagrams can represent ER concepts while integrating object-oriented features like inheritance and associations.
 
-![[Pasted image 20251027223652.png]]
+![[Pasted image 20251027223652.png|700]]
 
 ---
 # 7️⃣ Chapter 7
@@ -184,7 +184,7 @@ Three approaches:
 > `WORKS_ON(ESSN, PNO, HOURS)`  
 > PK = {ESSN, PNO}
 
-![[Pasted image 20251027230456.png]]
+![[Pasted image 20251027230456.png|421]]
 ![[Pasted image 20251027230504.png]]
 
 ---
@@ -198,7 +198,7 @@ Three approaches:
 > [!example]
 > `DEPT_LOCATIONS(DNUMBER, DLOCATION)`
 
-![[Pasted image 20251027230514.png]]
+![[Pasted image 20251027230514.png|400]]
 ![[Pasted image 20251027230521.png]]
 
 ---
@@ -218,8 +218,7 @@ Three approaches:
 
 ###### ER to relation mapping
 ![[Pasted image 20251027230649.png]]
-![[Pasted image 20251027230657.png]]
-
+![[Pasted image 20251027230657.png|513]]
 
 ---
 

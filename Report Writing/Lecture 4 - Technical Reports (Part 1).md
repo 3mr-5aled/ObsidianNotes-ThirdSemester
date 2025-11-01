@@ -1,468 +1,366 @@
-# **RW – Technical Reports (Part 1)**
+---
+course: Report Writing
+lecture: Technical Reports (Part 1)
+date: {{date}}
+tags: [report-writing, lecture, university, notes]
+---
 
-### _Lecture 4 | Dr. Sally Saad et al._
+# 🧠 Report Writing – Technical Reports (Part 1)
+
+> [!note] **Overview**  
+This lecture introduces the structure, components, and writing techniques of **technical reports**, emphasizing clarity, completeness, and professionalism. It also contrasts the **abstract** and **conclusion**, explains report organization, paragraph structure, and provides formatting and visual presentation guidelines.
 
 ---
 
-## **1. Types of Reports**
-
-- **Technical reports:** project or graduation work
-    
-- **Business plans:** strategic proposals
-    
-- **Research papers:** new methods, algorithms, or results
-    
-- **Academic overviews:** review of a scientific topic
-    
-- **Book reports**
-    
-- **Theses**
-    
-
-> **Note:** formats vary slightly.
+## 📘 Continuity with Previous Lectures
+Builds upon earlier discussions on **effective writing and structure**, focusing now on applying these principles to **technical and academic reports** such as theses, research papers, and business plans.
 
 ---
 
-## **2. Good Writing – 6 Cs**
+## 🧩 Types of Reports
+> [!note]
+Common report types include:
+- **Technical Reports** – Course or graduation projects  
+- **Business Plans** – Market or product strategy documents  
+- **Research/Scientific Papers** – Present new algorithms or experiments  
+- **Academic Overviews** – Present a scientific topic from multiple perspectives  
+- **Book Reports** – Summarize and evaluate written works  
+- **Theses** – Comprehensive academic research projects  
 
-|Principle|Definition|
-|---|---|
-|**Completeness**|Provide all necessary information.|
-|**Correctness**|Ensure relevance and accuracy.|
-|**Credibility**|Support arguments with evidence.|
-|**Clarity**|Avoid ambiguity.|
-|**Conciseness**|Be direct.|
-|**Consideration**|Anticipate the reader’s reaction.|
-
----
-
-## **3. Report Structure**
-
-### **Main Sections**
-
-1. **Acknowledgment (optional):** who helped.
-    
-2. **Abstract:** summary of what was done.
-    
-3. **Introduction:** define the problem.
-    
-4. **Materials and Methods:** how it was solved.
-    
-5. **Results:** what was found.
-    
-6. **Discussion:** interpret results.
-    
-7. **Conclusion:** summarize findings.
-    
-8. **Appendices (optional):** extra data.
-    
-9. **References:** cited work.
-    
-
-> **Writing order suggestion:**  
-> Methods → Results & Discussion → Conclusion → Introduction → Abstract.
-
-![[Pasted image 20251014123018.png]]
+> [!example]
+A *technical report* may detail an engineering project’s design and testing.  
+A *business plan* might propose a new app with financial projections.
 
 ---
 
-## **4. Acknowledgment**
+## ✅ Good Writing Principles (6Cs)
+> [!note]
+>1. **Completeness** – Include all necessary information.  
+>2. **Correctness** – Ensure factual accuracy.  
+>3. **Credibility** – Support claims with evidence.  
+>4. **Clarity** – Avoid vagueness or ambiguity.  
+>5. **Conciseness** – Be direct and precise.  
+>6. **Consideration** – Anticipate reader expectations.
 
-Example phrasing: thanking supervisors, institutions, sponsors, and family for support.
+> [!tip]
+**Mnemonic:** *3C Writing* → *Complete, Clear, Concise* — then add *Correct, Credible, Considerate.*
 
-> [!Example]
-
-* First of all, I would like to thank God Almighty for giving me the opportunity and guidance to achieve my goal.
-	
-* My warm and heartfelt thanks go to my family for their tremendous support throughout the completion of this work. 
-	
-* I would also like to thank Dr. King for her advice and cooperation as she helped me to access data from relevant university departments . 
-	
-* I would also like to thank XYZ systems for their tuning of the technical equipments and their skill in running the XYZ system.
-	
-* Last but not least, I want to thank Ms.Green, for being my Guardian Lecturer, and Prof. White for being my Supervisor. I am forever thankful and indebted to you for sharing your knowledge, expertise, and guidance.
-
-
-> Avoid excessive emotion. Keep formal and concise.
+🟢 Basic
 
 ---
 
-## **5. Abstract**
-In short, everything goes in the Abstract.
-### **Purpose**
+## 🧱 Report Structure and Writing Order
 
-- Attract readers.
-    
-- Provide a clear overview.
-    
-- Aid indexing.
-    
-- Help retention of key findings.
-    
+> [!note]
+**Sections of a Report**
+>1. **Acknowledgment** *(optional)* – Who helped me out?  
+>2. **Abstract** – What did I do in a nutshell?  
+>3. **Introduction** – What is the problem?  
+>4. **Materials and Methods** – How did I solve the problem?  
+>5. **Results** – What did I find out?  
+>6. **Discussion** – What does it mean?  
+>7. **Conclusion** – What was done?  
+>8. **Appendices** *(optional)* – Extra information.  
+>9. **References** – Whose work did I refer to?
 
-### **Content Checklist**
+> [!tip]
+**Mnemonic:** *AIMRDCAR* → *Acknowledgment, Introduction, Methods, Results, Discussion, Conclusion, Appendices, References.*
 
-✅ **Include:**
-
-- Topic & need
-    
-- Purpose/objectives
-    
-- Methods used
-    
-- Scope
-    
-- (Optionally) Results & conclusions
-    
-
-❌ **Avoid:**
-
-- Background info
-    
-- Citations
-    
-- Acronyms
-    
-- Figures/tables
-    
-- Discussion
-    
-
-### **Rules**
-
-- Everything mentioned must appear in body.
-    
-- No new information.
-    
-- Follow the chronology of the report.
-    
-
-### **Common Errors**
-
-- Using “I” or “We”.
-    
-- Future tense.
-    
-- Blurred results.  (“some”, “small”, “very”, “significant”).
-    
-- Missing data.
-    
-*  Adding References.
+🟢 Basic
 
 ---
 
-### **Example Analysis**
+## 🙏 Acknowledgment
+> [!example]
+> “I would like to thank my family for their support and Dr. King for her guidance.”
 
-**Poor abstract:** describes paper organization, uses first person, no results.  
-**Good abstract:** covers purpose, method, and quantifiable results.
+> [!warning]
+Avoid overly emotional or repetitive thanks. Focus on professional acknowledgments only.
 
----
-
-## **6. Introduction**
-
-### **Purpose**
-
-Define context, summarize prior work, identify gap, state objectives.
-
-### **Typical Content**
-
-1. **Context:** importance of topic.
-    
-2. **Literature review:** prior research.
-    
-3. **Problem definition:** identify gaps or disagreements.
-    
-4. **Present work:** objectives, methods, key results, benefits.
-    
-5. **Roadmap:** organization of paper.
-    
-
-### **Common Problems**
-
-- Too long or detailed.
-    
-- Repetition.
-    
-- Unclear problem definition.
-    
-- Poor organization.
-    
+🟢 Basic
 
 ---
 
-## **7. Conclusion**
+## 🧾 Abstract
 
-### **Purpose**
+> [!note]
+The **Abstract** is a concise summary including:
+>- Topic and purpose  
+>- Need for the work  
+>- Methods and scope  
+>- Optional: key results or conclusions  
 
-Summarize findings and implications; connect back to field.
+> [!warning]
+Do **not** include:
+>- Figures, tables, references, acronyms, or lengthy background.
 
-### **Content**
+> [!example]
+> “This project describes a new inertial navigation system that increases mapping accuracy by a factor of ten…”
 
-- Reintroduce project briefly.
-    
-- Restate objectives and results.
-    
-- Highlight major findings.
-    
-- Provide recommendations/future work.
-    
+> [!tip]
+**Mnemonic:** *TPMSR* → *Topic, Purpose, Method, Scope, Results.*
 
-### **Avoid**
+> [!question]
+What should be avoided when writing an abstract?
 
-- “In conclusion” clichés.
-    
-- Introducing new ideas.
-    
-- Emotional appeals.
-    
-
-### **Common Problems**
-
-- Too detailed.
-    
-- No connection to larger significance.
-    
+🟡 Intermediate
 
 ---
 
-### **Abstract vs Conclusion**
+## ⚖️ Abstract Rules
+- Follow report chronology.  
+- Use past or present tense, **not future**.  
+- Avoid “I” or “we.”  
+- Meet word count limits.
 
-|Abstract|Conclusion|
-|---|---|
-|Outside report body|Inside report body|
-|Brief overview|Summary of discussion|
-|No figures/tables|May include figures/tables|
-|Attracts readers|Reinforces importance|
-
----
-
-## **8. Front Matter**
-
-- **Title page:** report title, author, recipient, date.
-    
-	![[Pasted image 20251014123453.png]]
-    
-    
-    
-- **Table of contents:** sections + page numbers.
-    
-- **Lists:** figures, tables, abbreviations.
-    
-    ![[Pasted image 20251014134330.png]]
-    
-- **Page numbering:** Roman (front), Arabic (main).
-	
-	![[Pasted image 20251014132641.png]]
-    
-![[Pasted image 20251014123305.png]]
+🟢 Basic
 
 ---
 
-## **9. Formatting Rules**
+## ❌ Bad Abstract Example
+> [!example]
+> “We present a framework for an engineering capstone program…”
 
-### **Headings**
+> [!warning]
+Errors:
+>- Uses **first person** (“We”).  
+>- Uses **future tense**.  
+>- **No results** included.  
+>- Describes structure, not findings.
 
-- Specific and self-explanatory.
-    
-- Proper case.
-    
-- No articles or special characters. (?/!/etc)
-    
-- Max 3 levels (1 → 1.1 → 1.1.1).
-	1 Introduction to Operating Systems 
-	1.1 ……….. 
-	1.1.1 …………….
-	❌ 1.1.1.1 ………………
-	
-* single line
-
-### **Paragraph Guidelines**
-
-- **Unity:** one main idea per paragraph.
-    
-- **Coherence:** consistent logic; use transitions.
-    
-- **Structure:**
-    
-    - Topic sentence → Development → Conclusion sentence.
-        
-
-### **Types of Paragraphs**
-
-- **Cause & Effect**
-    
-- **Comparison**
-    
-- **Contrast**
-    
-
-**Long Paragraph Fix:** split ideas.  
-**Short Paragraph Fix:** expand with more evidence.
+🟡 Intermediate
 
 ---
 
-## **10. Tables and Figures**
+## 🔍 Introduction
+> [!note]
+Typical content:
+>1. Introduce **field and context**.  
+>2. Summarize **previous research**.  
+>3. Define **the problem or gap**.  
+>4. Introduce **your work, objectives, and methods**.  
+>5. Provide a **road map** of report sections.
 
-|Use Tables When You Want to:|Use Figures When You Want to:|
-|---|---|
-|Show many precise values|Show trends/relationships|
-|Compare items|Summarize visually|
-|Show presence/absence|Show sequences or architecture|
-![[Pasted image 20251014140102.png]]
-![[Pasted image 20251014140109.png]]
-![[Pasted image 20251014140115.png]]
-![[Pasted image 20251014140122.png]]
-![[Pasted image 20251014140128.png]]
-### **Guidelines**
+> [!example]
+> “Machine learning has become essential in predictive analytics; however, few studies address model interpretability…”
 
-- Number separately (Table 1, Figure 1).
-    
-- Titles: above for tables, below for figures.
-    
-- Refer to them in text.
-    
-- Cite sources if adapted.
-    
-- Include units clearly.
-    
-![[Pasted image 20251014140159.png]]
-![[Pasted image 20251014140205.png]]
+> [!warning]
+Avoid excessive detail, poor organization, or unclear problem definition.
+
+🟡 Intermediate
+
 ---
 
-## **11. Equations**
+## 🧭 Conclusion
 
-Format:
+> [!note]
+Key points:
+>- Briefly restate purpose, findings, and recommendations.  
+>- Link back to research context.  
+>- Mention future work.
 
-```
-Dpc = αDup + βDuc     (1)
+> [!warning]
+Avoid:
+>- Introducing **new ideas** or **emotional appeals**.  
+>- Using phrases like *“In conclusion”* or *“In summary.”*
+
+> [!example]
+> “Design 1 is preferable due to its durability, lower cost, and ease of construction.”
+
+> [!tip]
+**Mnemonic:** *PRF → Purpose, Results, Future work.*
+
+🟡 Intermediate
+
+---
+
+## ⚔️ Abstract vs. Conclusion
+
+| Aspect | **Abstract** | **Conclusion** |
+|--------|---------------|----------------|
+| Position | Before body | Inside body |
+| Purpose | Attract reader, summarize entire report | Reinforce value and results |
+| Content | Brief overview (no tables/figures) | May include figures/tables |
+| Focus | Overview and motivation | Implications and significance |
+| Future Work | Optional | Common |
+
+🟢 Basic
+
+---
+
+## 🧮 Report Front Matter
+
+> [!note]
+**Includes:**
+>- Title Page  
+>- Abstract  
+>- Table of Contents  
+>- List of Figures & Tables  
+>- List of Abbreviations  
+
+> [!tip]
+Use **lowercase Roman numerals (i, ii, iii)** for front matter; **Arabic (1, 2, 3)** for body.
+
+🟢 Basic
+
+---
+
+## 🧩 Report Body Essentials
+
+### Paragraph Guidelines
+- **Unity** – One idea per paragraph.  
+- **Coherence** – Logical flow using transitions.  
+- **Parallelism** – Maintain tense and structure.  
+
+### Paragraph Structure
+1. **Topic Sentence** – Introduce main idea.  
+2. **Development Sentences** – Explain or provide examples.  
+3. **Concluding Sentence** – Summarize and link to next idea.
+
+> [!example]
+> “Cities have grown due to industrialization, education, and cultural opportunities.”
+
+> [!warning]
+Avoid paragraphs that are **too long** (multiple ideas) or **too short** (insufficient development).
+
+🟡 Intermediate
+
+---
+
+## 📊 Visual Aids and Data
+
+> [!note]
+**Tables:** For precise numeric data, comparisons, or presence/absence.  
+**Figures:** For trends, architecture, or summarized visuals.  
+**Text:** For brief or simple data.
+
+> [!example]
+> “As shown in Table 1, only 21% of respondents knew how to administer CPR.”
+
+> [!tip]
+Number separately: *Table 1, Figure 1,* etc.  
+Tables → title above; Figures → title below.
+
+🟢 Basic
+
+---
+
+## 🧮 Equations
+- Centered on the page  
+- Numbered (e.g., Eq. (1))  
+- Reference as “Eq. (1)” in text  
+- For multi-chapter reports: use *Chapter#.Equation#*
+
+🟢 Basic
+
+---
+
+## 🎨 Formatting and Style
+
+- Use clear fonts (**Times New Roman** or **Arial**).  
+- Consistent font usage.  
+- Use **bold headings** and **white space** for readability.  
+- Avoid **Comic Sans** or decorative fonts.  
+- Limit headings to **three levels**.
+
+🟢 Basic
+
+---
+
+## 🧠 Concept Hierarchy Diagram
+
+```mermaid
+mindmap
+  root((Technical Report))
+    Structure
+      Abstract
+      Introduction
+      Methods
+      Results
+      Discussion
+      Conclusion
+    Writing Principles
+      6Cs
+      Unity
+      Coherence
+    Visuals
+      Tables
+      Figures
+      Equations
 ```
 
-- Centered.
+---
+
+## 🧩 Hands-On Practice
+
+1. Write an **abstract** summarizing your semester project in ≤150 words.
     
-- Number right aligned.
+2. Identify one **poor abstract** and rewrite it using _TPMSR_.
     
-- Refer as Eq. (1).
+3. Create a **table** and **figure** for a dataset from your project.
     
-- Long reports → chapter#.equation#.
+4. Draft a **topic sentence** for a paragraph on report clarity.
     
 
 ---
 
-## **12. Style and Fonts**
+## 📚 Glossary
 
-- Typeface: **Times New Roman** or **Arial**.
+- **Abstract:** Summary of report objectives, methods, and results.
     
-- Avoid multiple fonts.
+- **Introduction:** Context and problem definition.
     
-- Bold headings, use white space.
+- **Discussion:** Interpretation of findings.
     
-- Recommended sizes:
+- **Conclusion:** Final synthesis and future outlook.
     
-    - 12–14 pt for text, 24+ pt for titles.
-        
-![[Pasted image 20251014140246.png]]
-
----
-
-## **13. Grouping Information**
-
-- **Synthesis Grid:** organizes sources.
+- **Front Matter:** Preliminary pages (title, abstract, contents).
     
-- **Mind Maps / Concept Maps:** visualize relationships.
+- **6Cs:** Core writing principles ensuring quality communication.
     
 
 ---
 
-## **14. Practice Exercises (Examples)**
+## 🔑 Key Takeaways
 
-- Identify whether a statement belongs in Abstract, Introduction, or Conclusion.
+- Every section has a defined purpose and order.
     
-- Fill-in-the-blank review questions.
+- Abstract ≠ Conclusion.
     
-- MCQs on front matter and table usage.
+- Clarity and organization define report quality.
     
-
----
-
-## **Glossary**
-
-|Term|Meaning|
-|---|---|
-|**Abstract**|Summary of the entire report.|
-|**Acknowledgment**|Section crediting contributors.|
-|**Methodology**|Process used to solve problem.|
-|**Discussion**|Interpretation of results.|
-|**Appendix**|Supplementary data.|
-
----
-
-## **Key Takeaways**
-
-- Structure = foundation of technical clarity.
+- Visuals must complement text, not replace it.
     
-- Abstract and Conclusion serve distinct purposes.
-    
-- Paragraph unity and coherence drive readability.
-    
-- Visual aids (tables/figures) must be purposeful and referenced.
-    
-- Professional presentation matters (fonts, headings, numbering).
+- Formal tone and structure maintain credibility.
     
 
 ---
 
-## **Memory Aid – “RAC MODEL”**
+## 🧩 Quick Review Card
 
-**R**eport Types → **A**bstract rules → **C**onclusion clarity → **M**ethods order → **O**rganized structure → **D**ata presentation → **E**xecutive style → **L**ogical flow.
+**Q1:** What are the 6Cs of good writing?  
+**A:** Completeness, Correctness, Credibility, Clarity, Conciseness, Consideration.
 
----
+**Q2:** What should an abstract never include?  
+**A:** Figures, tables, references, or acronyms.
 
-## **Potential Exam Questions**
+**Q3:** What tense should conclusions use?  
+**A:** Present or past tense, not future.
 
-1. Explain the **6 Cs** of good writing with examples.
-    
-2. Compare **Abstract vs Conclusion**.
-    
-3. Identify errors in a given abstract.
-    
-4. Discuss the importance of unity and coherence in paragraphs.
-    
-5. When should tables vs figures be used?
-    
-6. Write a sample acknowledgment for a technical report.
-    
+**Q4:** Difference between abstract and conclusion?  
+**A:** Abstract summarizes; conclusion synthesizes and interprets.
+
+**Q5:** How are tables and figures numbered?  
+**A:** Separately, with tables titled above and figures below.
 
 ---
 
-## **Recommended Resources**
+## 📖 Further Resources
 
-- _“Technical Report Writing Today”_ – Daniel Gerson & Steven Gerson
+- _Alley, M._ (2018). **The Craft of Scientific Writing**. Springer.
     
-- Purdue OWL – Technical Writing Section
+- _Pears, R., & Shields, G._ (2019). **Cite Them Right**.
     
-- IEEE Author Guidelines (on abstracts and structure)
+- Purdue OWL: [Technical Report Writing Guide](https://owl.purdue.edu/)
     
-
----
-
-## **Mind Map: Technical Report Structure**
-
-```
-Technical Report
-│
-├── Front Matter
-│   ├── Title Page
-│   ├── Abstract
-│   ├── TOC / Lists
-│
-├── Body
-│   ├── Introduction
-│   ├── Methods
-│   ├── Results
-│   ├── Discussion
-│   ├── Conclusion
-│
-├── Back Matter
-│   ├── Appendices
-│   └── References
-```
+- IEEE Author Center: [Writing Effective Abstracts](https://journals.ieeeauthorcenter.ieee.org/)

@@ -1,214 +1,307 @@
-# Lecture 1: Digital Systems and Binary Numbers  
-**Instructor:** Mirvat Al-Qutt, Ph.D – Ain Shams University  
-**Course:** Digital Logic Design  
+---
+course: Logic Design
+lecture: Digital Systems and Binary Numbers
+date: 2025-11-01
+tags:
+  - logic design
+  - number systems
+  - binary
+  - university
+  - notes
+---
+
+# 🧠 Logic Design – Digital Systems and Binary Numbers
+
+> [!note]
+> This lecture introduces **digital systems**, **binary representation**, and **number base conversions**.  
+> It establishes foundational concepts for understanding how data is represented, processed, and converted in digital logic circuits.
 
 ---
 
-## Agenda
-- What’s this course about?
-- Course arrangement
-- Study materials
-- Grading and assessment
-- Teaching methods
-- Planned syllabus
-- Instructor contact
+## 📘 Overview
+
+- Define **Logic Design** and its relevance to modern computing.  
+- Explain **Digital vs Analog systems**.  
+- Study **Number Systems**: Decimal, Binary, Octal, and Hexadecimal.  
+- Learn **conversion techniques** between bases.  
+- Practice applied examples and unit representations (K, M, G, T).
 
 ---
 
-## What is Logic Design?
-**Design:**  
-- Systematic way of solving a problem with constraints (size, cost, power, elegance).  
-
-**Logic Design:**  
-- Collection of digital logic components and interconnections.  
-- Functions: control, data manipulation, communication.  
-- Often optimized or transformed for constraints.
+## 🧩 Continuity with Previous Lectures
+This is **Lecture 1**, the foundation for all later topics (Boolean algebra, minimization, combinational and sequential circuits).
 
 ---
 
-## Why Study Logic Design?
-- First step to understanding computer architectures (hardware + computation).  
-- Base of all modern computing and control devices.  
-- Enables:
-  - Microprocessors
-  - Dense and inexpensive storage
-  - Wireless networking
-  - New materials
+## 🧱 1. Logic Design Fundamentals
+
+> [!note]
+> **Logic Design** is the process of determining the arrangement of **digital logic components** and their **interconnections** to perform specific computational or control functions.
+
+### What is Design?
+- Structured method to solve problems while meeting constraints (size, cost, power).
+
+### Why Study Logic Design?
+- It is the **first step** toward understanding computer architectures.
+- Forms the **basis** of all computing and control devices.
+- Enables development of microprocessors, memory, and networking technologies.
+
+🟢 **Basic**
 
 ---
 
-## Study Materials
-1. Notes / slides  
-2. Tutorials and lab sheets  
-3. Textbook: *Digital Design, 5th Edition* – M. Morris Mano & Michael Ciletti  
+## 🔢 2. Digital Systems
+
+> [!note]
+> **Digital systems** represent and manipulate **discrete elements** of information.
+
+Examples:
+- Decimal digits: {0–9}  
+- Alphabet letters: {A–Z}  
+- Chessboard squares: {1–64}
+
+🟢 **Basic**
 
 ---
 
-## Grading and Assessment
-- Final Written Exam: 50  
-- Midterm: 15  
-- Quizzes: 5  
-- Lab Activities, Assignments, Tasks: 10  
-- Practical Exam: 20  
+## 🌊 3. Analog vs Digital Signals
+
+| Type | Description | Representation |
+|------|--------------|----------------|
+| **Analog** | Continuous variation over a range | Voltage/time curve |
+| **Digital** | Discrete values only | Steps or pulses |
+
+> [!example]
+> **Analog signal:** sound wave, temperature change  
+> **Digital signal:** binary voltage levels (0 V = Logic 0, 5 V = Logic 1)
+
+🟢 **Basic**
 
 ---
 
-## Teaching Methods
-- Interactive lectures  
-- Discussions  
-- Problem-based learning  
-- Experimental learning (labs and hands-on practice)  
+## 💡 4. Binary Digital Signals
+
+- Two levels (0 or 1)
+- Represented as:
+  - Digits: **0, 1**
+  - Logical states: **False/True**, **Low/High**, **Off/On**
+
+> [!note]
+> A **bit** is a single binary digit.  
+> Multiple bits form **bytes**, **words**, and **addresses** in digital systems.
+
+🟡 **Intermediate**
 
 ---
 
-## Syllabus (Planned)
-1. Digital Systems and Binary Numbers  
-2. Boolean Algebra and Logic Gates  
-3. Gate-Level Minimization  
-4. Combinational Logic  
-5. Synchronous Sequential Logic  
-6. Registers and Counters  
+## 🔣 5. Number Systems Overview
+
+| System | Base | Digits Used | Example | Notation |
+|--------|------|-------------|----------|-----------|
+| Decimal | 10 | 0–9 | (7392)₁₀ | ( )₁₀ |
+| Binary | 2 | 0–1 | (11010)₂ | ( )₂ |
+| Octal | 8 | 0–7 | (257)₈ | ( )₈ |
+| Hexadecimal | 16 | 0–9, A–F | (B65F)₁₆ | ( )₁₆ |
+
+> [!tip]
+> **Rule:** Base = number of unique digits (from 0 to base − 1).
+
+🟢 **Basic**
 
 ---
 
-## Instructor Contact
-- **Mirvat Al-Qutt, Ph.D.**  
-- Email: mmalqutt@cis.asu.edu.eg  
+## 🧮 6. Decimal Number System (Base 10)
+
+- Base (radix) = 10  
+- Digits: {0 – 9}
+- **Value = ∑ (Digit × $10^{Position}$ )**
+
+> [!example]
+> $(7392)_{10} = 7×10^3 + 3×10^2 + 9×10^1 + 2×10^0 = 7392$
+
+🟢 **Basic**
 
 ---
 
-## Chapter Outline
-1.1 Digital Systems  
-1.2 Binary Numbers  
-1.3 Number-Base Conversions  
-1.4 Octal and Hexadecimal Numbers  
-1.9 Binary Logic  
+## ⚙️ 7. Binary Number System (Base 2)
+
+- Base (radix) = 2  
+- Digits: {0, 1}
+- **Value = ∑ (Digit × $2^{Position}$ )**
+
+> [!example]
+> $(11010.11)_2 = 16 + 8 + 2 + 0.5 + 0.25 = (26.75)_{10}$
+
+> [!tip]
+> Remember “**$2^n$**” rule: each bit position doubles in weight from right to left.
+
+🟢 **Basic**
 
 ---
 
-## Key Concepts
-
-### Digital Systems
-- Represent and manipulate discrete information.  
-- Examples:
-  - Decimal digits {0–9}  
-  - Alphabet letters {A–Z}  
-  - 64 chessboard squares  
-
-### Signals
-**Analog system:** continuous values.  
-**Digital system:** discrete values.  
-
-### Binary Digital Signal
-- Two levels: 
-	- Digits 0 and 1
-	- False (F) and True (T)
-	- Low (L) and High (H)
-	- On and Off
----
-
-## Number Systems
-digits :LiArrowBigRight: { 0 , **base** - 1 } 
-base = **radix**
-
-### Decimal (Base 10)
-- Digits: {0–9}  
-- Value = Σ(digit × 10<sup>postion</sup>).  
-
-### Binary (Base 2)
-- Digits: {0,1}  
-- Value = Σ(digit × 2<sup>position</sup>).  
-
-### Base-5
-- Digits: {0–4}  
-- Value = Σ(digit × 5<sup>position</sup>).  
+## 🔢 8. Octal and Hexadecimal Systems
 
 ### Octal (Base 8)
-- Digits: {0–7}  
-- Value = Σ(digit × 8<sup>position</sup>).  
+- Digits: {0–7}
+- Each octal digit = **3 binary bits**
+
+> [!example]
+> $(127.4)_8 = 1×8^2 + 2×8^1 + 7×8^0 + 4×8^-1 = (87.5)_{10}$
 
 ### Hexadecimal (Base 16)
-- Digits: {0–9,A–F}  
-- Groups binary into 4-bit chunks.  
-- Used in addresses, instructions, data.  
+- Digits: {0–9, A–F}
+- Each hex digit = **4 binary bits**
+
+> [!example]
+> $(B65F)_{16} = 11×16^3 + 6×16^2 + 5×16^1 + 15×16^0 = (46,687)_{10}$
+
+🟡 **Intermediate**
 
 ---
 
-## Binary System Notes
-- Bits = binary digits.  
-- Conversion to decimal: add powers of 2 for bits = 1.  
-- Storage units:
-  - 2<sup>10</sup> = 1K  (kilo)
-  - 2<sup>20</sup> = 1M  (mega)
-  - 2<sup>30</sup> = 1G  (giga)
-  - 2<sup>40</sup> = 1T  (tera) 
-- Byte = 8 bits.  
+## 🔁 9. Number Base Conversions
 
-	![[Pasted image 20250924225114.png]]
-	
-	![[Pasted image 20250924225242.png]]
----
+| Conversion | Method |
+|-------------|---------|
+| Decimal → Binary | Divide by 2 repeatedly (record remainders) |
+| Decimal → Octal | Divide by 8 repeatedly |
+| Decimal → Hex | Divide by 16 repeatedly |
+| Fractional Conversion | Multiply by base repeatedly (record integers) |
 
-## Number Base Conversions
-- **Decimal → Binary (integer):** divide repeatedly by 2.  
-- **Decimal → Binary (fraction):** multiply repeatedly by 2.  
-- **Decimal → Octal / Hex:** same process with base 8 or 16.  
-- **Binary ↔ Octal:** group 3 bits.  
-- **Binary ↔ Hexadecimal:** group 4 bits.  
-- **Octal ↔ Hexadecimal:** convert via binary as intermediate.  
+> [!example]
+> **Decimal → Binary**  
+> $(13)_{10}$ ÷ 2 → Remainders (1,0,1,1)  
+> **Answer:** $(1101)_2$
 
+> [!example]
+> **Fractional Conversion:**  
+> $(0.625)_{10}$ → Multiply by 2: 0.625×2=1.25 → 0.25×2=0.5 → 0.5×2=1 →  
+> **Answer:** $(0.101)_2$
 
-	![[Pasted image 20250924225313.png]]
----
-
-## Conversion Tables
-| Decimal | Binary | Octal | Hex |
-|---------|--------|-------|-----|
-| 0       | 0000   | 0     | 0   |
-| 1       | 0001   | 1     | 1   |
-| 2       | 0010   | 2     | 2   |
-| 3       | 0011   | 3     | 3   |
-| 4       | 0100   | 4     | 4   |
-| 5       | 0101   | 5     | 5   |
-| 6       | 0110   | 6     | 6   |
-| 7       | 0111   | 7     | 7   |
-| 8       | 1000   | 10    | 8   |
-| 9       | 1001   | 11    | 9   |
-| 10      | 1010   | 12    | A   |
-| 11      | 1011   | 13    | B   |
-| 12      | 1100   | 14    | C   |
-| 13      | 1101   | 15    | D   |
-| 14      | 1110   | 16    | E   |
-| 15      | 1111   | 17    | F   |
+🟡 **Intermediate**
 
 ---
 
-## Practice Exercises
-- Convert 41 decimal → binary.  
-- Convert 153 decimal → octal.  
-- Convert 0.6875 decimal → binary.  
-- Convert 0.513 decimal → octal.  
-- Convert (01101011.111100) binary → octal and hexadecimal.  
-- Convert (673.12) octal → binary.  
-- Convert (306.D) hexadecimal → binary.  
+## 🔗 10. Inter-base Conversions
+
+### Binary ↔ Octal  
+- Group bits in **3s**
+> [!example]
+> $(010110.010)_2 = (26.2)_8$
+
+### Binary ↔ Hexadecimal  
+- Group bits in **4s**
+> [!example]
+> $(10110.01)_2 = (16.4)_{16}$
+
+### Octal ↔ Hexadecimal  
+- Convert via **binary intermediate**
+
+> [!warning]
+> Always **pad with leading/trailing zeros** to form complete bit groups.
+
+🟡 **Intermediate**
 
 ---
 
-### Digital vs Analog
-Digital :LiArrowBigRight: Discrete numbers
-Analog :LiArrowBigRight: infinite numbers (continues)
-### Numbering systems 
-**(base == radix )**
-* *Decimal*  (base 10)
-* *Binary*  (base 2)
-*  *Octal* (base 8)
-* *Hexadecimal* (base 16)
+## 🧠 11. Binary System Units
 
-### Equation to get total number of numbers in bytes
-**n = 5** :LiArrowBigRight: XXXXX
-	 ***0:LiArrowBigRight: 2<sup>n</sup>  -1**
-0 :LiArrowBigRight: 31
+| Unit | Power of 2 | Name | Example |
+|------|-------------|------|----------|
+| 2¹⁰ | Kilo (K) | 1 K = 1024 |
+| 2²⁰ | Mega (M) | 1 M = 1,048,576 |
+| 2³⁰ | Giga (G) | 1 G = 1,073,741,824 |
+| 2⁴⁰ | Tera (T) | 1 T = 1,099,511,627,776 |
 
-## Conversions 
-Decimal Numbering System
-![[Pasted image 20250924195523.png]]
+🟢 **Basic**
+
+---
+
+## 🧩 Hands-On Practice
+
+> [!question]
+> Convert the following:
+> 1. (41)₁₀ → Binary  
+> 2. (153)₁₀ → Octal  
+> 3. (0.6875)₁₀ → Binary  
+> 4. (0.513)₁₀ → Octal  
+> 5. (01101011.111100)₂ → Octal and Hexadecimal  
+> 6. (673.12)₈ → Binary  
+> 7. (306.D)₁₆ → Binary
+
+🟢 **Basic → Intermediate**
+
+---
+
+## 🧭 Concept Hierarchy Diagram
+
+```mermaid
+mindmap
+  root((Number Systems))
+    Digital Systems
+      Binary System
+        Conversion
+          Decimal ↔ Binary
+          Binary ↔ Octal
+          Binary ↔ Hexadecimal
+      Octal System
+      Hexadecimal System
+    Signal Types
+      Analog
+      Digital
+```
+
+---
+
+## 📖 Glossary
+
+|Term|Definition|
+|---|---|
+|**Bit**|Binary digit (0 or 1)|
+|**Byte**|8 bits|
+|**Radix/Base**|Number of unique digits in a number system|
+|**LSB/MSB**|Least/Most Significant Bit|
+|**Kilo/Mega/Giga/Tera**|Binary-based measurement units|
+|**Hexadecimal**|Base-16 system using 0–9, A–F|
+
+---
+
+## 🏁 Key Takeaways
+
+- Logic Design underlies all digital computing.
+    
+- Binary is the foundation of digital representation.
+    
+- Base conversions rely on division or multiplication by base.
+    
+- Octal = 3-bit groups; Hex = 4-bit groups.
+    
+- Always check digit group alignment when converting.
+    
+
+---
+
+## 🧠 Quick Review Card
+
+|Q|A|
+|---|---|
+|What is the base of the binary system?|2|
+|How many bits are in a byte?|8|
+|What does each hex digit represent in binary?|4 bits|
+|How do you convert (13)₁₀ to binary?|Divide by 2 → (1101)₂|
+|What is (B65F)₁₆ in decimal?|46,687|
+
+---
+
+## 📚 Further Resources
+
+- _Digital Design_, 5th Edition — M. Morris Mano & Michael Ciletti
+    
+- MIT OpenCourseWare: [Digital Systems Lectures](https://ocw.mit.edu/)
+    
+- YouTube: Neso Academy – Digital Electronics
+    
+- _Logic and Computer Design Fundamentals_, Mano & Kime
+    
+
+---

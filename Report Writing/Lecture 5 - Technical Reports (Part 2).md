@@ -1,8 +1,15 @@
 ---
 course: Report Writing
 lecture: Technical Reports (Part 2)
-date: {{date}}
-tags: [report-writing, technical-reports, referencing, citation, plagiarism, university, notes]
+date: 2025-10-31T23:48:00
+tags:
+  - report-writing
+  - technical-reports
+  - referencing
+  - citation
+  - plagiarism
+  - university
+  - notes
 ---
 # 🧠 Report Writing – Technical Reports (Part 2)
 
