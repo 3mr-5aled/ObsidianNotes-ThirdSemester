@@ -155,6 +155,11 @@ This is the **first lecture** of the Database course. It establishes the foundat
 
 ---
 
+
+
+
+
+
 ## 8. Main Characteristics of the Database Approach 🔴 Advanced
 
 ### 8.1 Self-Describing Nature

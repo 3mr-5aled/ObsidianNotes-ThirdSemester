@@ -460,25 +460,3 @@ mindmap
 | 7 | N-ary Relationship | New Table | N-ary needs new relation |
 
 ---
-
-## 🧠 Concept Diagram (Mermaid Visualization)
-
-```mermaid
-mindmap
-  root((ER-to-Relational Mapping))
-    Step 1 Regular Entity
-      "Make a table"
-    Step 2 Weak Entity
-      "Add FK + partial key"
-    Step 3 1:1 Relationship
-      "Choose FK / Merge / Relation"
-    Step 4 1:N Relationship
-      "Put FK on N-side"
-    Step 5 M:N Relationship
-      "Create new relation"
-    Step 6 Multivalued Attribute
-      "Separate table for each value"
-    Step 7 N-ary Relationship
-      "Table with all FKs"
-```
-

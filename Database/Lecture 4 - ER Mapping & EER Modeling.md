@@ -179,7 +179,7 @@ There are **three approaches**:
 
 ### **Subclasses and Superclasses**
 - A **subclass** is a subset of entities from a **superclass**.
-- There are called "IS_A" relationship
+- There are called **"IS_A"** relationship
 - Each subclass may have:
   - **Local attributes** (specific to subclass)
   - **Local relationships**
@@ -306,6 +306,15 @@ There are **three approaches**:
 > **“SDHTGC” → Steps Define Hierarchy, Then Generalize Carefully**  
 > Helps remember the EER progression:  
 > **S**pecialization → **D**isjointness → **H**ierarchy → **T**otality → **G**eneralization → **C**ompleteness
+
+| Step                   | Concept                                                                                                                                                                         |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **S – Specialization** | Start by identifying **subclasses** from a superclass. Example: `Employee` → `Manager`, `Engineer`.                                                                             |
+| **D – Disjointness**   | Decide if subclasses are **disjoint (mutually exclusive)** or **overlapping**. Example: A person can’t be both a `Student` and `Teacher` (disjoint).                            |
+| **H – Hierarchy**      | Define the **inheritance hierarchy** — how attributes and relationships flow from superclass to subclasses. Example: All subclasses inherit `Employee`’s attributes.            |
+| **T – Totality**       | Specify if the specialization is **total (every entity belongs to a subclass)** or **partial (some don’t)**. Example: Every employee is either `Manager` or `Engineer` (total). |
+| **G – Generalization** | Reverse of specialization. Combine similar entities into a **superclass**. Example: Combine `Car`, `Truck`, `Bus` into `Vehicle`.                                               |
+| **C – Completeness**   | Ensure **all entities and attributes are covered** in the hierarchy; no data loss or redundancy.                                                                                |
 
 ---
 

@@ -66,6 +66,14 @@ A *business plan* might propose a new app with financial projections.
 > [!tip]
 **Mnemonic:** *AIMRDCAR* → *Acknowledgment, Introduction, Methods, Results, Discussion, Conclusion, Appendices, References.*
 
+## Writing order (MR.CIA)
+- Material and Methods
+- Results and Discussion
+- Conclusion
+- Introduction
+- Abstract
+
+
 🟢 Basic
 
 ---

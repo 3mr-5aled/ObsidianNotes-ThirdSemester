@@ -246,6 +246,22 @@ mindmap
    - “basically”  
    - “generally”
 
+
+>[!Mnemonic] 
+🧠 **D.E.J.R.A. → “Delete Every Jumbled, Repeated Adverb.”**
+>
+>
+| Letter | Category              | Reminder                                                 |
+| ------ | --------------------- | -------------------------------------------------------- |
+| **D**  | **Dead weight words** | Cut useless openers like _“As it is well known.”_        |
+| **E**  | **Empty words**       | Drop vague fillers like _“important.”_                   |
+| **J**  | **Jargon**            | Avoid technical overkill like _“Gliomagenesis.”_         |
+| **R**  | **Repetition**        | Don’t repeat with pairs like _“illustrate/demonstrate.”_ |
+| **A**  | **Adverbs**           | Remove weak words like _“very,” “really,” “quite.”_      |
+>
+> 🔑 **Memory Hook:** _To write clearly, remember D.E.J.R.A — Delete Every Jumbled, Repeated Adverb._
+
+
 ---
 
 ## ✂️ Long Words and Phrases That Could Be Shortened
