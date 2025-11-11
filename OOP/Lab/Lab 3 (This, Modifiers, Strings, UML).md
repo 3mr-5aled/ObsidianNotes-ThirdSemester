@@ -1,5 +1,3 @@
-# 🧠 Object Oriented Programming – Lab 3: `this` Keyword, Modifiers, Strings, and UML Diagrams
-
 > [!overview]
 > This lab covers **the `this` keyword**, **access and field modifiers**, **string handling**, and **UML class diagrams**. It demonstrates encapsulation, inheritance relationships, and object aggregation through Java code and modeling exercises.
 
@@ -12,7 +10,7 @@
 
 ### Usages
 - Refers to **current class instance variable**.
-- Invokes **current class methods**.
+- Invokes **current class methods**. (compiler adds it if you don't)
 - Calls **current class constructors**.
 
 > [!example]
@@ -30,6 +28,8 @@
 > }
 > ```
 
+![[Pasted image 20251111221706.png]]
+
 > [!tip]
 > Use `this` when **local variables shadow instance variables** to avoid ambiguity.
 
@@ -37,12 +37,12 @@
 
 ## 2. Access Modifiers
 
-| Modifier   | Within Class | Within Package | Subclass | Outside Package |
-|-------------|---------------|----------------|-----------|------------------|
-| **private** | ✅ | ❌ | ❌ | ❌ |
-| **default** | ✅ | ✅ | ❌ | ❌ |
-| **protected** | ✅ | ✅ | ✅ | ❌ |
-| **public** | ✅ | ✅ | ✅ | ✅ |
+| Modifier      | Within Class | Within Package | Subclass | Outside Package |
+| ------------- | ------------ | -------------- | -------- | --------------- |
+| **private**   | ✅            | ❌              | ❌        | ❌               |
+| **default**   | ✅            | ✅              | ❌        | ❌               |
+| **protected** | ✅            | ✅              | ✅        | ❌               |
+| **public**    | ✅            | ✅              | ✅        | ✅               |
 
 > [!note]
 > Modifiers control visibility and encapsulation of **fields, methods, and classes**.
@@ -218,7 +218,14 @@ classDiagram
 - Weak association.
     
 - Entities can exist independently.
-    
+	
+- It is a **special form of Association** where:  
+- It represents **Has-A’s relationship**.
+- It is a **unidirectional association** i.e. a one-way relationship. 
+- For example, a department can have students **but vice versa is not possible** and thus unidirectional in nature.
+- Both entries **can survive individually** which means ending one entity will not affect the other entity.
+
+
 
 ```mermaid
 classDiagram
@@ -230,7 +237,19 @@ classDiagram
 - Strong association.
     
 - One entity depends on the other.
-    
+	
+- Composition is a restricted form of Aggregation in which two entities are highly dependent on each other.  
+- It represents part-of relationship.
+- Both entities are dependent on each other.
+- When there is a composition between two entities, 
+- the composed object cannot exist without 
+- the other entity.
+	Example: House has rooms, 
+		The room can’t exist if there is no house
+	Example: Human and heart,
+	 heart doesn’t exist separate to a Human. 
+
+
 
 ```mermaid
 classDiagram

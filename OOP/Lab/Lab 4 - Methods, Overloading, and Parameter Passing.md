@@ -4,8 +4,6 @@ lecture: Lab 4 – Methods, Overloading, and Parameter Passing
 date: {{date}}  
 tags: [oop, methods, overloading, java, university, notes]
 ---
-# 🧠 Object-Oriented Programming – Lab 4: Methods, Overloading, and Parameter Passing
-
 > [!note]  
 > This lab covers Java method types, method overloading, parameter passing semantics, static vs instance behavior, constructors and constructor chaining. Includes worked Employee example with UML, Mermaid concept map, study tips, and hands-on practice.
 

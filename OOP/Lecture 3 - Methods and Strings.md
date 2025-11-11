@@ -1,5 +1,3 @@
-# 🧠 OOP – Lecture 3: Methods and Strings
-
 **Instructor:** Mohamed Mabrouk  
 **Course:** Object-Oriented Programming  
 **Lecture Focus:** Methods, Constructors, and Strings in Java
@@ -76,7 +74,7 @@ protected int add(int num1, int num2) {
     
 - `final`: Cannot be overridden by subclasses.
     
-- `abstract`: Must be overridden in subclass (no body).
+- `abstract`: Must be overridden in subclass (empty body in parent class ).
     
 ---
 
@@ -128,6 +126,16 @@ TestClass.method1();
 TestClass obj = new TestClass();
 obj.method2();
 ```
+
+**Omitted**
+```java
+  void showInfo() {
+	printName(); // ✅ reference omitted (correct)
+    this.printName(); // ✅ optional, same meaning
+    // new Student().printName(); ❌ unnecessary
+    }
+```
+
 
 ---
 
@@ -224,6 +232,13 @@ public static void main(String[] args)
 - `String[] args`: Used for passing runtime arguments.
     
 
+>[!Mnemonic]
+>
+>**PSVM.sa** = Public , static , void , main , String args
+
+- All **parameters should be strings**
+- Can be converted to integers or floats, etc.
+
 **Example:**
 
 ```java
@@ -282,6 +297,15 @@ String s1 = new String();
 String s2 = new String(str);
 String s3 = new String(chars);
 ```
+
+
+
+- Each time you create a string literal, the JVM checks the "string constant pool" first. 
+- If the string already exists in the pool, a reference to the pooled instance is returned. 
+- If the string doesn't exist in the pool, a new string instance is created and placed in the pool.
+   
+![[Pasted image 20251111223121.png]]
+![[Pasted image 20251111223507.png]]
 
 ---
 

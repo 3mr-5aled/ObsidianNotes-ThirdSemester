@@ -1,5 +1,3 @@
-# 🧠 Object Oriented Programming – Lecture 2: Java Syntax, Control Structures, Classes, and Objects
-
 > [!overview]
 > This lecture introduces **Java syntax**, essential **control structures**, and the foundations of **Object Oriented Programming (OOP)**.  
 > Topics: branching, loops, arrays, classes, objects, constructors, UML diagrams, and access modifiers.
@@ -121,6 +119,12 @@ float[] arr2 = {1.2F, 3.4F, 5.6F, 7.8F};
 
 ## 4️⃣ Classes and Objects
 
+- An object is an **instance of a specific class**
+- It **reserves memory** in the system
+- Can be used do the **real job** of the class it represents
+- Can be **instantiated using keyword new**
+- If not instantiated it will be **NULL**
+
 ### 🔹 Class Definition
 
 Blueprint that defines fields and methods.
@@ -150,6 +154,21 @@ Student stud = new Student("John Smith", 75);
 
 ### 🔹 Constructors
 
+### 🔹 Constructors
+
+- Every class needs at least one **constructor**.
+	
+- A class can have multiple constructors (**overloading**).
+	
+- No **return type** (not even `void`).
+	
+- Name must match the **class name** exactly.
+	
+- If none are defined, the compiler creates a **default (no-arg) constructor**.
+    - The default constructor initializes fields to their **default values** (e.g., 0 for numbers, `false` for booleans, `null` for objects).
+    - Implicitly calls the **parent class's constructor**.
+    - Use `super();` to explicitly call a parent constructor.
+	
 - Initialize objects.
     
 - **Same name** as class.
@@ -207,12 +226,12 @@ classDiagram
 
 ### 🔹 Field Modifiers
 
-| Modifier    | Inside Class | Same Package | Subclass | Other Package |
-| ----------- | :----------: | :----------: | :------: | :-----------: |
-| `private`   |    **✓**     |      X       |    X     |       X       |
-| _none_      |    **✓**     |    **✓**     |  **✓**   |       X       |
-| `protected` |    **✓**     |    **✓**     |  **✓**   |     **✓**     |
-| `public`    |    **✓**     |    **✓**     |  **✓**   |     **✓**     |
+| Modifier    | Inside Class | Same Package | Same Package Subclass | Other Package Class | Other Package Subclass |
+| :---------- | :----------: | :----------: | :-------------------: | :-----------------: | :--------------------: |
+| `private`   |    **✓**     |      X       |           X           |          X          |           X            |
+| _none_      |    **✓**     |    **✓**     |         **✓**         |          X          |           X            |
+| `protected` |    **✓**     |    **✓**     |         **✓**         |          X          |         **✓**          |
+| `public`    |    **✓**     |    **✓**     |         **✓**         |        **✓**        |         **✓**          |
 
 ### 🔹 Static & Final
 

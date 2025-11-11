@@ -4,9 +4,6 @@ lecture: Exception Handling & JavaDocs
 date: {{date}}
 tags: [oop, java, exception-handling, javadocs, lecture, university, notes]
 ---
-
-# 🧠 Object-Oriented Programming – Exception Handling & JavaDocs
-
 > [!note]
 > This lecture introduces **exception handling in Java**, covering how exceptions occur, how to handle them using `try-catch-finally`, how to define custom exceptions, and how to document code using **JavaDocs**. It also explores the distinction between **checked** and **unchecked** exceptions, best practices, and real-world use cases.
 

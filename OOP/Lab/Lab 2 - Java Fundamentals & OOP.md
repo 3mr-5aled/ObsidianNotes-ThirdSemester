@@ -1,5 +1,3 @@
-# 🧠 Object Oriented Programming – Lecture 2: Arrays, Control Structures, Classes, and Encapsulation
-
 > [!overview]
 > This lecture explores **arrays**, **control structures**, and the foundations of **Object-Oriented Programming (OOP)** in Java. Concepts include **loops**, **decision-making**, **classes**, **constructors**, and **encapsulation** with access and field modifiers.
 
@@ -191,6 +189,100 @@ public class Rectangle {
 ```java
 Rectangle myRect = new Rectangle();
 ```
+## Memory
+### **1. Stack**
+
+- **Purpose:** Stores **primitive local variables** and **references to objects** (not the objects themselves).
+    
+- **Memory allocation:** Automatic, managed by JVM. Memory is allocated and freed when a method is called/returns.
+    
+- **Scope & Lifetime:**
+    
+    - Variables exist **only within the method** where they are declared.
+        
+    - Once the method ends, the stack memory is released automatically.
+        
+- **Speed:** Very fast because of sequential memory allocation.
+    
+- **Example:**
+    
+
+```java
+void foo() {
+  int x = 10;         // stored in stack
+  Person p = new Person(); // reference p is on stack, object is on heap
+}
+
+```
+
+Here, `x` and the reference `p` are on the **stack**, but the actual `Person` object lives on the **heap**.
+
+- **Advantages:** Fast, simple memory management.
+    
+- **Disadvantages:** Limited size; only for short-lived data.
+    
+
+---
+
+### **2. Heap**
+
+- **Purpose:** Stores **objects** and **class instances**.
+    
+- **Memory allocation:** Dynamic, managed by **Garbage Collector (GC)**.
+    
+- **Scope & Lifetime:**
+    
+    - Objects exist as long as there are references pointing to them.
+        
+    - When no references remain, GC frees the memory.
+        
+- **Speed:** Slower than stack because it involves dynamic allocation and GC.
+    
+- **Example:**
+    
+
+```java
+Person p1 = new Person(); // object allocated in heap
+Person p2 = p1;           // both references point to same heap object
+
+```
+
+- **Key Points:**
+    
+    - All objects created with `new` go on the heap.
+        
+    - Multiple references can point to the same object.
+        
+
+---
+
+### **3. Interaction Between Stack and Heap**
+
+- **References on stack** point to **objects on heap**.
+    
+- **Primitive variables on stack** store actual values.
+    
+- **Garbage Collection:** Only applies to objects on the heap.
+    
+
+| Feature      | Stack                                               | Heap                             |
+| ------------ | --------------------------------------------------- | -------------------------------- |
+| Stores       | Primitive variables & references                    | Objects & instance data          |
+| Allocation   | Method call                                         | Dynamic (`new`)                  |
+| Deallocation | Automatic at method end                             | Automatic via Garbage Collector  |
+| Speed        | Fast                                                | Slower                           |
+| Lifetime     | Short-lived                                         | Long-lived (until no references) |
+| Example      | `int x = 5; Person p = new Person();` (p reference) | `new Person()` object            |
+
+---
+
+**Summary:**
+
+- **Stack:** temporary, fast, holds method-level primitives and object references.
+    
+- **Heap:** long-lived, stores actual objects, managed by GC.
+
+
 
 ---
 
@@ -203,7 +295,7 @@ Rectangle myRect = new Rectangle();
 ### Types of Constructors
 
 #### Default Constructor
-
+- _it is the constructor which doesn't take any argument. It has no parameter or return type._
 ```java
 public Rectangle() {
     len = 0;
@@ -213,7 +305,7 @@ public Rectangle() {
 ```
 
 #### Parameterized Constructor
-
+- _it is the constructor with parameter. Using this Constructor you can provide different values to data members of different objects, by passing the appropriate values as argument._
 ```java
 public Rectangle(int l, int w) {
     len = l;
@@ -223,7 +315,7 @@ public Rectangle(int l, int w) {
 ```
 
 #### Copy Constructor
-
+- _It is a constructor which creates an object by initializing it with an object of the same class, which has been created previously.)_
 ```java
 public Rectangle(Rectangle r) {
     len = r.len;
@@ -235,6 +327,30 @@ public Rectangle(Rectangle r) {
 > [!warning]  
 > If no constructor is defined, the **compiler** creates a default one.  
 > If **any constructor** is defined, the compiler does **not** create a default constructor automatically.
+
+> [!warning]  
+> *Copy constructor. Takes only one parameter which is of the same time of the class and set all the values of data members to make copy of the object.*
+Unlike C++, java doesn’t create a copy constructor if you don’t write your own.
+
+> [!important]
+> 
+> Calling class constructor without parameters for parametrized constructor
+> 
+> ```java
+> 
+> public class Rectangle {
+> 	int len, width;
+> 	public Rectangle(int l, int w){ //%parametrized constructor
+> 		len = l;
+> 		width = w;
+> 	}
+> }
+> public static void main(String[] args) {
+> 	Rectangle rec = new Rectangle( ); //%Error 
+> }
+> ```
+> 
+> 
 
 ---
 

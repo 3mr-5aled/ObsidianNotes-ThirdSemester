@@ -1,5 +1,3 @@
-# 🧠 Object Oriented Programming – Lecture 1: Introduction to OOP
-
 > [!overview]
 > This lecture introduces the fundamentals of **Object-Oriented Programming (OOP)** using **Java**. Topics include the Java language history, technology stack, OOP principles, syntax, and example programs.
 
@@ -149,12 +147,12 @@ Hides complexity and exposes only necessary details via **classes and interfaces
 Enables **hierarchical relationships** between classes and **code reuse**.
 
 ### 4. Polymorphism
-
+	Means many forms
 Allows the same function name to act differently based on context.
 
 - **Overloading:** Same method name, *different parameters*.
     
-- **Overriding:** Subclass redefines superclass method.
+- **Overriding:** Subclass redefines superclass method. (related to inheritance )
     
 
 $\text{Polymorphism}:  \begin{cases}  \text{Overloading:} & f(a),\ f(a, b) \   \\ \text{Overriding:} & \text{Subclass redefines superclass method}  \end{cases}$
@@ -188,7 +186,40 @@ public class Calculator {
     `public static void main(String[] args)`
     
 - Every statement ends with a **semicolon**.
-    
+
+## 🧱 Example: Basic Java Program
+
+-  There must at least one main method
+- It has to be defined inside a class
+- It has to have the signature
+	`public static void main(String[] args)`
+
+```java
+public class MyClass {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+📘 Explanation
+>[!tip] Key Points
+>- The Java filename **must match the class name**, e.g. MyClass.java.
+>- Each statement **must end with** a semicolon (;).
+>- Code compilation command:
+
+Code can be compiled via command
+javac MyClass.java
+
+Code execution command:
+java MyClass
+
+🧠 Output
+```
+Hello World
+```
+
+
 
 ---
 
@@ -230,3 +261,7 @@ public class Calculator {
 - [Java Tutorial – Tutorialspoint](https://www.tutorialspoint.com/java/index.htm)
     
 - [Beginner’s Java Guide – BeginnersBook](https://beginnersbook.com/java-tutorial-for-beginners-with-examples)
+
+
+### Important 
+- There must at least one main method , It has to be defined inside a class
