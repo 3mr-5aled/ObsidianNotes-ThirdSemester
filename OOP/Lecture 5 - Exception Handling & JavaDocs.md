@@ -1,8 +1,15 @@
 ---
 course: Object-Oriented Programming
 lecture: Exception Handling & JavaDocs
-date: {{date}}
-tags: [oop, java, exception-handling, javadocs, lecture, university, notes]
+date: 2025-11-16T19:55:00
+tags:
+  - oop
+  - java
+  - exception-handling
+  - javadocs
+  - lecture
+  - university
+  - notes
 ---
 > [!note]
 > This lecture introduces **exception handling in Java**, covering how exceptions occur, how to handle them using `try-catch-finally`, how to define custom exceptions, and how to document code using **JavaDocs**. It also explores the distinction between **checked** and **unchecked** exceptions, best practices, and real-world use cases.
@@ -89,9 +96,8 @@ public void displayArrayItem(int[] arr, int index) {
 > Think of exceptions like a **fire alarm** — the normal flow stops until someone (the `catch` block) responds.
 
 ---
-
 ## 🧩 Types of Exceptions
-
+![[Pasted image 20251116200323.png]]
 ### 1. Checked Exceptions 🟡
 
 > [!note]  
@@ -268,6 +274,9 @@ public class Calculator {
     }
 }
 ```
+
+### JavaDoc Output
+![[Pasted image 20251116200402.png]]
 
 ---
 
