@@ -44,6 +44,16 @@ multiArr = new int[2][3];
 DataType[] variableName = new DataType[size];
 ```
 
+**Static Initialization (inline values)**
+
+You define and populate the array in one shot.
+
+```java
+int[] numbers = {10, 20, 30, 40};
+String[] names = {"Ali", "Omar", "Sara"};
+double[] prices = {19.99, 25.50, 10.75};
+```
+
 ---
 
 ## 2. Control Flow
@@ -52,7 +62,6 @@ DataType[] variableName = new DataType[size];
 
 - **while loop**
     
-
 ```java
 while (condition) {
     // statements
@@ -60,7 +69,6 @@ while (condition) {
 ```
 
 - **do-while loop**
-    
 
 ```java
 do {
@@ -70,7 +78,6 @@ do {
 
 - **for loop**
     
-
 ```java
 for (int i = 0; i < N; i++) {
     // statements
@@ -79,7 +86,6 @@ for (int i = 0; i < N; i++) {
 
 - **foreach loop**
     
-
 ```java
 for (DataType element : array) {
     // statements
@@ -148,9 +154,7 @@ graph TD
     style E fill:#ffccbc,stroke:#333
 ```
 
-![[Pasted image 20251009203415.png]]
-![[Pasted image 20251009203428.png]]
-![[Pasted image 20251009203435.png]]
+![[Pasted image 20251202203236.png]]
 
 ---
 
@@ -184,6 +188,10 @@ public class Rectangle {
 }
 ```
 
+![[Pasted image 20251202203255.png]]
+![[Pasted image 20251202203304.png]]
+![[Pasted image 20251202203318.png]]
+![[Pasted image 20251202203325.png]]
 ### Object Instantiation
 
 ```java
