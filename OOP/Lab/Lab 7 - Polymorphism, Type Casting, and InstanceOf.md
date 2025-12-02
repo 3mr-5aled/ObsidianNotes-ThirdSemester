@@ -181,7 +181,7 @@ Two major forms:
 
 ---
 
-# Upcasting Example (as in slide)
+## Upcasting Example (as in slide)
 
 ```java
 class parent {
@@ -214,7 +214,7 @@ public class Main {
 
 ---
 
-# Downcasting Example (as in slide)
+## Downcasting Example (as in slide)
 
 ```java
 parent upcasting=new child();
@@ -230,7 +230,7 @@ upcasting.display_child(); //ERROR
 
 ---
 
-# InstanceOf Keyword
+## InstanceOf Keyword
 
 🟢 Basic
 
@@ -261,7 +261,7 @@ True
 
 ---
 
-# InstanceOf + Downcasting Error Example
+## InstanceOf + Downcasting Error Example
 
 ```java
 Vehicle v1 = new Car(); 

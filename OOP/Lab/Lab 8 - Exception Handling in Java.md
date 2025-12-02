@@ -1,8 +1,14 @@
 ---
 course: Object-Oriented Programming
 lecture: Exception Handling in Java (Lab 8)
-date: {{date}}
-tags: [oop, java, exceptions, lecture, university, notes]
+date: 2025-12-02
+tags:
+  - oop
+  - java
+  - exceptions
+  - lecture
+  - university
+  - notes
 ---
 > [!note] Overview  
 > This lecture introduces Java’s exception-handling model, covering exception types, checked vs. unchecked exceptions, try–catch–finally structures, the throw/throws keywords, exception propagation, and user-defined exceptions. You learn how to maintain application stability by managing runtime anomalies effectively.
@@ -70,7 +76,7 @@ Developer <font color="#c00000">cannot recover</font>.
 ### **Checked Exceptions** 🟡  
 - Verified at **compile-time**.  
 - Direct subclasses of **Throwable**, except `RuntimeException` and `Error`.  
-- Examples: `IOException`, `SQLException`.
+- Examples: `IOException`, `SQLException`, .
 
 ### **Unchecked Exceptions** 🟢  
 - Subclasses of `RuntimeException`.  
@@ -105,6 +111,7 @@ catch(Exception e) { ... }
 ```
 
 > **( from special to general )** in expectation order. 
+> child to parent and statement order.
 
 ---
 
@@ -314,3 +321,32 @@ mindmap
 * *Effective Java* by Joshua Bloch – Chapter on Exceptions
 * Oracle Java Docs – Exception Handling
 * howtodoinjava.com – Try/catch/finally tutorials
+
+## Example of user-defined exception
+```java
+
+Custom exception:
+ class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+ }
+ checkAge method and main:
+ public class Q17 {
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+    }
+        }
+            throw new InvalidAgeException("Age is less than 18");
+        System.out.println("Age is OK");
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        } catch (InvalidAgeException e) {
+            System.out.println("Too young");
+        }
+    }
+ }
+
+
+```
