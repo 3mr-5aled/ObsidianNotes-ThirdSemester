@@ -32,7 +32,6 @@ tags:
 > This lecture introduces inheritance, which adds **hierarchical relationships** between objects and enables **code reuse and polymorphism**.
 
 ---
-
 ## 🧩 Inheritance
 
 > [!note]
@@ -222,12 +221,12 @@ Bike is running
 
 ## ⚖️ Overloading vs Overriding
 
-|Feature|Overloading|Overriding|
-|---|---|---|
-|Location|Same class|Parent & Child classes|
-|Parameters|Must differ|Must match|
-|Type|Compile-time (static) polymorphism|Runtime (dynamic) polymorphism|
-|Keyword|None|`@Override` recommended|
+| Feature    | Overloading                            | Overriding                       |
+| ---------- | -------------------------------------- | -------------------------------- |
+| Location   | Same class                             | Parent & Child classes           |
+| Parameters | Must **differ**                        | Must **match**                   |
+| Type       | **Compile-time (static) polymorphism** | *Runtime (dynamic) polymorphism* |
+| Keyword    | None                                   | `@Override` recommended          |
 
 > [!tip]  
 > Mnemonic:  

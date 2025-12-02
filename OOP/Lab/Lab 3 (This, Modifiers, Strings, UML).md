@@ -28,7 +28,7 @@
 > }
 > ```
 
-![[Pasted image 20251111221706.png]]
+![[Pasted image 20251202174435.png]]
 
 > [!tip]
 > Use `this` when **local variables shadow instance variables** to avoid ambiguity.
@@ -101,6 +101,7 @@ String s2 = new String("Hello"); // Using new keyword
 > Literal strings are stored in the **String Constant Pool**;  
 > new Strings are created in the **heap memory**.
 
+![[Pasted image 20251202191459.png]]
 ### String Comparison
 
 - `==` → compares **references**.
@@ -108,7 +109,7 @@ String s2 = new String("Hello"); // Using new keyword
 - `.equals()` → compares **values**.
     
 - `.compareTo()` → compares **lexicographically**.
-    
+    ![[Pasted image 20251202191551.png]]
 
 ### Immutability
 
@@ -170,11 +171,12 @@ A **UML Class Diagram** describes the **structure of a system** by showing:
 ClassName
 -----------------
 - attributeName : DataType
+-----------------
 + methodName(param: Type) : ReturnType
 ```
 	
 * parameters are listed as (name: type).
-* Underline static methods.
+* **Underline static** methods.
 * Omit return type on constructors and when return type is
 	void.
 	
@@ -206,55 +208,61 @@ ClassName
 
 ### **Generalization (Inheritance)**
 
-“Is-a” relationship.
+“Is-a” / “is-Kind-of” relationship.
 
 ```mermaid
 classDiagram
     Person <|-- Student
 ```
-
+---
 ### **Aggregation (Has-a)**
 
-- Weak association.
-    
-- Entities can exist independently.
-	
+- **Weak** association.
+- Entities **can exist independently**.
 - It is a **special form of Association** where:  
 - It represents **Has-A’s relationship**.
 - It is a **unidirectional association** i.e. a one-way relationship. 
 - For example, a department can have students **but vice versa is not possible** and thus unidirectional in nature.
 - Both entries **can survive individually** which means ending one entity will not affect the other entity.
 
-
-
 ```mermaid
 classDiagram
     Reader "1" o-- "*" Book
 ```
-
+---
 ### **Composition (Part-of)**
 
-- Strong association.
-    
-- One entity depends on the other.
-	
-- Composition is a restricted form of Aggregation in which two entities are highly dependent on each other.  
-- It represents part-of relationship.
-- Both entities are dependent on each other.
+- **Strong** association.
+- Composition is a **restricted form of Aggregation** in which two entities are highly dependent on each other.  
+- It represents **part-of** relationship.
+- Both entities are **dependent on each other**.
 - When there is a composition between two entities, 
-- the composed object cannot exist without 
-- the other entity.
-	Example: House has rooms, 
-		The room can’t exist if there is no house
-	Example: Human and heart,
-	 heart doesn’t exist separate to a Human. 
-
-
+	the composed object cannot exist without the other entity.
+		*Example*: House has rooms, 
+			The room can’t exist if there is no house
+		*Example*: Human and heart,
+		 heart doesn’t exist separate to a Human. 
 
 ```mermaid
 classDiagram
     Human "1" *-- "1" Heart
 ```
+---
+### **Aggregation vs Composition — Comparison Table**
+
+| Feature / Aspect           | **Aggregation (Has-A)**                                            | **Composition (Part-Of)**                                       |
+| -------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------- |
+| **Type of Association**    | **Weak** association                                               | **Strong** association                                          |
+| **Dependency Level**       | Objects **can** exist independently                                | Objects **cannot** exist independently                          |
+| **Ownership**              | **Shared** ownership (non-exclusive)                               | **Exclusive** ownership (one-to-one containment)                |
+| **Lifecycle Relationship** | Destroying the container does **not** destroy the contained object | Destroying the container **also destroys** the contained object |
+| **Direction**              | Usually **unidirectional**                                         | Usually **unidirectional but with strict containmen**t          |
+| **Example**                | Department → Student                                               | House → Room                                                    |
+| **Object Survival**        | Both survive independently                                         | Part object cannot survive alone                                |
+| **Relationship Meaning**   | “Has-A”                                                            | “Part-Of”                                                       |
+| **UML Notation**           | **Hollow** diamond                                                 | **Solid** diamond                                               |
+| **Real-World Behavior**    | Association is **loose** and **optional**                          | Association is **tight** and **mandatory**                      |
+| **Code Representation**    | Class holds reference, but object can exist without owner          | Class creates and manages the lifetime of contained object      |
 
 ---
 

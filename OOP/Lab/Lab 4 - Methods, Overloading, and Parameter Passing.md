@@ -58,23 +58,23 @@ tags: [oop, methods, overloading, java, university, notes]
         
 
 > [!example] Java examples:
-
-```java
-class Adder {
-    int add(int a, int b) { return a + b; }
-    int add(int a, int b, int c) { return a + b + c; }
-    double add(double a, double b) { return a + b; }
-}
-
-class TestOverloading {
-    public static void main(String[] args) {
-        Adder adder = new Adder();
-        System.out.println(adder.add(11, 11));       // 22
-        System.out.println(adder.add(11, 11, 11));   // 33
-        System.out.println(adder.add(12.3, 12.6));   // 24.9
-    }
-}
-```
+> 
+> ```java
+> class Adder {
+>     int add(int a, int b) { return a + b; }
+>     int add(int a, int b, int c) { return a + b + c; }
+>     double add(double a, double b) { return a + b; }
+> }
+> 
+> class TestOverloading {
+>     public static void main(String[] args) {
+>         Adder adder = new Adder();
+>         System.out.println(adder.add(11, 11));       // 22
+>         System.out.println(adder.add(11, 11, 11));   // 33
+>         System.out.println(adder.add(12.3, 12.6));   // 24.9
+>     }
+> }
+> ```
 
 > [!tip]  
 > If return type differs but parameter list is identical, it is **not** overloading. Java resolves overloads at compile time by parameter signature.
@@ -97,7 +97,13 @@ class TestOverloading {
     
 
 > [!example]  
-> `public static int compute(int a, int b) { return a + b; }`
+> 
+> ```java
+> public static int compute(int a, int b) {
+> 	return a + b; 
+> }
+> ```
+> 
 
 ---
 
@@ -108,7 +114,6 @@ class TestOverloading {
 
 - Primitive example:
     
-
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -122,7 +127,6 @@ public class Main {
 
 - Reference example (mutating the object):
     
-
 ```java
 class Test { int x; Test(int i) { x = i; } }
 
@@ -138,7 +142,6 @@ class MainRef {
 
 - Reference reassign inside method does not affect caller's reference:
     
-
 ```java
 static void change(Test ts) {
     ts = new Test(100);
@@ -155,11 +158,11 @@ static void change(Test ts) {
 
 > [!note]  
 > **Instance methods** operate on object state. They require an instance to be invoked.  
-> **Static methods** belong to the class and can be called without an object.
+> **Static methods (Class Method)** belong to the class and can be called without an object.
 
 Rules and consequences:
 
-- Static methods can access only static members directly.
+- Static methods can access only static members directly and **accessed directly by the class name**.
     
 - Instance methods can access static and instance members.
     
@@ -167,31 +170,31 @@ Rules and consequences:
     
 
 > [!example]
-
-```java
-public class Example {
-    int a = 10;          // instance
-    static int b = 10;   // class
-
-    public void instanceMethod() {
-        a = a + 10;
-        b = b + 1;
-    }
-
-    public static void staticMethod() {
-        b = b + 10;
-        // a = a + 1; // compile error
-    }
-
-    public static void main(String[] args) {
-        Example ex = new Example();
-        ex.instanceMethod();           // operate on ex.a
-        System.out.println(ex.a);      // 20
-        Example.staticMethod();
-        System.out.println(Example.b); // 21 (or higher depending on previous ops)
-    }
-}
-```
+> 
+> ```java
+> public class Example {
+>     int a = 10;          // instance
+>     static int b = 10;   // class
+> 
+>     public void instanceMethod() {
+>         a = a + 10;
+>         b = b + 1;
+>     }
+> 
+>     public static void staticMethod() {
+>         b = b + 10;
+>         // a = a + 1; // compile error
+>     }
+> 
+>     public static void main(String[] args) {
+>         Example ex = new Example();
+>         ex.instanceMethod();           // operate on ex.a
+>         System.out.println(ex.a);      // 20
+>         Example.staticMethod();
+>         System.out.println(Example.b); // 21 (or higher depending on previous ops)
+>     }
+> }
+> ```
 
 > [!tip]  
 > Use static for utility functions and shared state. Avoid mutable static state in concurrency contexts.
@@ -204,32 +207,32 @@ public class Example {
 > **Constructor** initializes new objects. Constructors can be overloaded. You can call one constructor from another using `this(...)` — called constructor chaining.
 
 > [!example] Rectangle constructors from lab:
-
-```java
-public class Rectangle {
-    int len;
-    int width;
-    String color;
-
-    public Rectangle() {
-        this(0, 0, null);   // chaining to param constructor
-    }
-
-    public Rectangle(int l, int w) {
-        this(l, w, null);
-    }
-
-    public Rectangle(Rectangle r) {
-        this(r.len, r.width, r.color);
-    }
-
-    public Rectangle(int l, int w, String c) {
-        this.len = l;
-        this.width = w;
-        this.color = c;
-    }
-}
-```
+> 
+> ```java
+> public class Rectangle {
+>     int len;
+>     int width;
+>     String color;
+> 
+>     public Rectangle() {
+>         this(0, 0, null);   // chaining to param constructor
+>     }
+> 
+>     public Rectangle(int l, int w) {
+>         this(l, w, null);
+>     }
+> 
+>     public Rectangle(Rectangle r) {
+>         this(r.len, r.width, r.color);
+>     }
+> 
+>     public Rectangle(int l, int w, String c) {
+>         this.len = l;
+>         this.width = w;
+>         this.color = c;
+>     }
+> }
+> ```
 
 ---
 

@@ -19,9 +19,9 @@ tags:
 
 - Closed algebra → every operation outputs a **relation**
 - Queries are expressed as **expressions** built by composing operations
-##### Operations include:
-  - **Unary:** SELECT **σ**, PROJECT **π**, RENAME **ρ**  
-  - **Set-based:** UNION **∪**, INTERSECT **∩**, DIFFERENCE **−**, CARTESIAN PRODUCT **×**  
+- Operations include:
+  - **Unary:** SELECT σ, PROJECT π, RENAME ρ  
+  - **Set-based:** UNION ∪, INTERSECT ∩, DIFFERENCE −, CARTESIAN PRODUCT ×  
   - **Binary:** JOIN, EQUIJOIN, NATURAL JOIN, OUTER JOIN  
   - **Additional:** AGGREGATES, GROUPING, OUTER UNION
 
@@ -42,16 +42,16 @@ tags:
 
 ## 1. SELECT (σ)
 > [!note]
-> **SELECT σ** filters rows (tuples) based on a Selection condition.
+> **SELECT σ** filters rows based on a Boolean condition.
 
 Example:  
-- σ<sub>&lt;DNO=4&gt;</sub>(EMPLOYEE)  
-- σ<sub>&lt;SALARY>30000&gt;</sub>(EMPLOYEE)
+- σ<sub>DNO=4</sub>(EMPLOYEE)  
+- σ<sub>SALARY>30000</sub>(EMPLOYEE)
 
 Properties:
-- Schema remains **unchanged**
+- Schema remains unchanged
 - **Commutative**
-- Sequences can merge via **AND**  
+- Sequences can merge via AND  
   σ₁(σ₂(R)) = σ(1 AND 2)(R)
 
 🟢 Basic
@@ -68,7 +68,7 @@ Example:
 Key properties:
 - Removes **duplicate tuples**
 - Reduces **degree** (number of attributes)
-- **Not** commutative
+- Not commutative
 
 🟢 Basic
 
@@ -206,6 +206,8 @@ Examples:
 - R ⋈<sub>θ</sub> S = σ<sub>θ</sub>(R × S)
 
 🔴 Advanced
+
+![[Pasted image 20251125132106.png]]
 
 ---
 
@@ -439,8 +441,3 @@ mindmap
     
 - “Relational Algebra & SQL Translation” – MIT OCW
     
-
-```
-
-If you want, I can now generate **SQL equivalents** for all operations or produce a **compact exam-only version**.
-```
