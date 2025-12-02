@@ -8,11 +8,7 @@
 - OOP is captured from **real life**, where we constantly deal with different types of **objects**.
 - All objects possess specific **attributes** (data) and **behavior** (operations).
 - The primary goal of OOP is to address problems found in **Structured Programming (SP)**, such as **unrestricted access** to global data and **unrelated functions and data** (lack of real-world modeling).
-![[Pasted image 20251009193134.png]]
-![[Pasted image 20251009193146.png]]
-![[Pasted image 20251009193154.png]]
 ### Classes and Objects
-![[Pasted image 20251009193202.png]]
 - **Class**: A user-defined **data type** that defines the **attributes** and **operations** (methods) of an object.
 - **Object**: Variables of type class.
     - Every object is an **instance** of a class.
@@ -27,7 +23,7 @@
 ### Main OOP Concepts (The Four Pillars)
 
 The core concepts of OOP are often represented as the four pillars:
-![[Pasted image 20251009193227.png]]
+![[Pasted image 20251202214656.png]]
 1. **Encapsulation**
 2. **Abstraction**
 3. **Inheritance**
@@ -41,31 +37,34 @@ Before Java, a typical software development process involved several tools:
 
 - **Editor (IDE)**: Where the programmer writes the **source code**.
 - **Compiler**: Translates the source code into **object code** (CPU-specific instructions).
+	![[Pasted image 20251202214826.png]]
 - **Linker**: Converts one or several object modules into an **executable program**.
+	![[Pasted image 20251202214841.png]]
 - **Debugger**: Helps find logical mistakes ("bugs") by stepping through the program in "slow motion".
-![[Pasted image 20251009193236.png]]
+
+
 ---
 
 ## The Java Platform
-
+![[Pasted image 20251202214859.png]]
 **Java** is both **platform-independent** (the same program runs on any correctly implemented Java system) and **object-oriented** (structured in terms of classes).
 
 ### Java Platform Editions
-![[Pasted image 20251009193247.png]]
+
 The Java 2 Platform has three main editions:
-![[Pasted image 20251009193253.png]]
+
 - **J2SE** (Java 2 Platform, Standard Edition): Primarily focused on in this course.
 - **J2ME** (Java 2 Platform, Micro Edition)
 - **J2EE** (Java 2 Platform, Enterprise Edition)
 
 ### Java Installation Components
-
+![[Pasted image 20251202214913.png]]
 - **JDK (Java Development Kit)**: A superset that contains the **JRE**, **JVM**, and development tools. Its primary objective is to provide support for build and compilation.
 - **JRE (Java Runtime Environment)**: Contains the **JVM** and all necessary libraries to run Java applications. It's enough to *run* an application.
 - **JVM (Java Virtual Machine)**: The virtual engine that enables **byte code** support.
 
 ### How Java Code Runs
-![[Pasted image 20251009193307.png]]
+![[Pasted image 20251202214922.png]]
 1. **Compile Time**: The **JDK** (containing the **Compiler**) translates **Java Code** (`MyDemo.java`) into **Byte Code** (`MyDemo.class`).
 2. **Runtime**: The **JRE** (containing the **JVM**) executes the byte code:
     - **Class Loader**: Part of the JVM that loads the byte code.
@@ -99,8 +98,7 @@ A **Package** is a group of related classes.
 - **Name Conflict Resolution**: If classes with the same name exist in two imported packages, the fully qualified name must be used (e.g., `java.util.Date deadline;`).
 
 ### Displaying Outputs
-![[Pasted image 20251009193107.png]]
-
+![[Pasted image 20251202214948.png]]
 Java provides three primary methods via `System.out` for displaying output:
 
 - **`System.out.print(...)`**: Shows the value passed to it without a newline.
