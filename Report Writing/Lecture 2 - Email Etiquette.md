@@ -30,7 +30,18 @@ tags: [report-writing, communication, email, professionalism, lecture]
 - Helps ensure that messages are understood and receive timely responses.
 
 ---
+## 📌 Core Principles of Email
 
+Email is a prevalent, cost-effective communication tool, yet many users lack a deep understanding of its professional functions.
+
+- **Know Your Purpose**: Before sending, ask: "Why am I sending this?" and "Is it necessary?". If you cannot identify a clear need from the recipient, do not send it. 🟢
+    
+- **The "One Thing" Rule**: Unlike meetings, an email should focus on a single "agenda" item. Keep content minimal for better results. 🟢
+    
+- **Practice Empathy**: Type to others as you wish to be typed to. Acknowledge that recipients are busy and appreciate gratitude. 🟡
+    
+- **Response Time**: Always acknowledge emails within **48 hours**. If a full reply isn't possible, send a brief confirmation of receipt and an expected timeline. 🟡
+---
 ## 2. Basic Structure of a Professional Email 🟢
 Every email should include the following key components:
 
@@ -166,6 +177,10 @@ Every email should include the following key components:
 > - Failing to attach mentioned files.  
 > - Forgetting a **thank-you** or closing.  
 > - Using “Reply All” inappropriately.
+
+
+### Use the "One Thing" Rule
+Make each email you send about one thing only or send multiple emails.
 
 ---
 

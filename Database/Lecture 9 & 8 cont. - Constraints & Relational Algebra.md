@@ -77,7 +77,7 @@ Key properties:
 ## 3. RENAME (ρ)
 > [!note]
 > **RENAME ρ** changes attribute or relation names.
-
+ 
 Forms:
 - ρ<sub>S(B1,...,Bn)</sub>(R) — rename relation + attributes  
 - ρ<sub>S</sub>(R) — rename relation  
@@ -106,7 +106,7 @@ RESULT ← π FNAME, LNAME, SALARY (DEP5_EMPS)
 
 ---
 
-# Set-Theoretic Operations
+# Set-Theoretic **Operations**
 
 ## UNION (R ∪ S)
 > [!note]
@@ -123,7 +123,7 @@ Requires **union compatibility**:
 ## INTERSECTION (R ∩ S)
 > [!note]
 > Returns tuples common to both relations.  
-> Requires union compatibility.
+> Requires **union compatibility.**
 
 🟢 Basic
 
@@ -169,7 +169,7 @@ DEPT_MGR ← DEPARTMENT ⋈<sub>MGRSSN=SSN</sub> EMPLOYEE
 > Condition θ may include:
 - =  
 - <  
-- >  
+- >
 - AND, OR combinations
 
 🟡 Intermediate

@@ -18,22 +18,22 @@ tags:
 
 ## Purpose
 > [!note]  
-> A **Weekly Status Report (WSR)** updates stakeholders about project *progress*, *risks*, *issues*, and *accomplishments*.
+> A **Weekly Status Report (WSR)** updates **stakeholders** about project *progress*, *risks*, *issues*, and *accomplishments*.
 
-## Key Points 🟢 Basic
+## Key Points 🟢 **Basic****
 - Tracks **budget**, **milestones**, **risks**, **progress**.
-- Frequency & detail level depends on **audience**.
+- Frequency & detail level depends on **audience & time frame**.
   - Team & managers → weekly, detailed  
   - Executives → highlights only  
 - Provides a **paper trail** and enforces accountability.
 
 ## Benefits 🟡 Intermediate
-- Early identification of risks and deviations.
-- Enables timely team adjustment.
-- Prevents surprises to clients/stakeholders.
-- Shows progress of individuals and teams.
-- Keep project members and leaders accountable
-- Provide a paper trail
+- Early **identification of risks** and deviations.
+- Enables **timely team adjustment**.
+- **Prevents surprises** to clients/stakeholders.
+- **Shows progress** of individuals and teams.
+- **Keep** project **members** and leaders **accountable**
+- Provide a **paper trail**
 
 ##### Example
 
@@ -47,15 +47,15 @@ tags:
 > A **Project Time Sheet** tracks time spent on tasks, enabling performance measurement, historical estimation, and client billing.
 
 ## Why Time Tracking Matters 🟢 Basic
-- Understand actual vs. planned effort.
+- Understand **actual vs. planned effort**.
 - Improves future **estimations**.
 - Essential for **billing**, especially for customized solutions.
-- Helps diagnose productivity issues and workload imbalance.
+- Helps **diagnose productivity issues** and **manage workload**.
 
-## Best Practices
+## Best Practices and Benefits
 - Filled **daily** for accuracy.
-- Records **billable vs. non-billable** hours.
-- Builds historical datasets for estimation.
+- Records **billable vs. non-billable** hours (For billing clients).
+- Builds **historical datasets for future estimation**.
 
 ##### Examples
 
@@ -74,11 +74,11 @@ tags:
 > Release Notes are distributed with every product version to communicate **changes, bug fixes, enhancements, known issues**, and **workarounds**.
 
 ## Types 🟢 Basic
-- **Internal Release Note**: detailed, for development teams.
-- **Public Release Note**: simplified, for customers.
+- **Internal Release Note**: detailed, for **development teams**.
+- **Public Release Note**: simplified, for **customers**.
 
 ## Characteristics
-- Not a substitute for a User Manual.
+- **Not** a substitute for a **User Manual**.
 - Must be **clear, correct, complete**.
 - Level of detail depends on release type:
   - New product → extensive  
@@ -142,7 +142,7 @@ tags:
 - Written in simple, **non-technical** language for general audiences.
 - Includes both text instructions and visuals such as screenshots and diagrams.
 - Adjusts terminology to the audience and explains **any necessary jargon**.
-- Created by technical writers with support from business teams.
+- **Created by technical writers** with **support from business teams**.
 ## Audience Analysis 🟢 Basic
 - Who are the users?  
 - Are there multiple user groups?  
@@ -241,7 +241,7 @@ Characteristics:
 > - **Ticket** = the documentation and tracking of that event  
 
 ## Features 🟡 Intermediate
-- **Self Service Portal:** A one-stop shop where workers and customers can quickly and easily submit their tickets.
+- **Self Service Portal:** A *one-stop shop* where workers and customers can quickly and easily submit their tickets.
 - **Ticket Log:** Sorting tickets by issue type, forwarding requests to appropriate team member and tracking tickets.
 - **Assigning Tickets:** Tickets are assigned to a single “owner” who will work on ticket from start to end.
 - **Live Support:** 24/7 staffed help-desk or chat service.

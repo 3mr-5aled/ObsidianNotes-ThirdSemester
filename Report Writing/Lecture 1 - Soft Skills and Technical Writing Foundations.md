@@ -193,17 +193,22 @@ mindmap
 > Avoid over-short sentences that sound abrupt or robotic. Variety improves readability.
 
 ---
+## Revision
+![[Pasted image 20251221160213.png]]
+- Good writing doesn’t happen overnight; **it requires planning, drafting, rereading, revising, and editing.**
+
+- Learning and improvement requires **self-review, peer-review, subject-matter expert feedback, and practice.**
 
 ## 🧹 Common Writing Issues
 
-| Problem Type        | Examples                  | Correction             |
-| ------------------- | ------------------------- | ---------------------- |
-| Dead weight phrases | “It can be regarded that” | Delete or simplify     |
-| Empty phrases       | “basic principles of”     | Specify meaning        |
-| Long phrases        | “give rise to” → “cause”  | Shorten                |
-| Jargon              | “miR”, “gliomagenesis”    | Avoid unless necessary |
-| Redundancy          | “illustrate/demonstrate”  | Choose one             |
-| Weak adverbs        | “very, really, quite”     | Eliminate              |
+| Problem Type            | Examples                  | Correction             |
+| ----------------------- | ------------------------- | ---------------------- |
+| **Dead weight phrases** | “It can be regarded that” | Delete or simplify     |
+| **Empty phrases**       | “basic principles of”     | Specify meaning        |
+| **Long phrases**        | “give rise to” → “cause”  | Shorten                |
+| **Jargon**              | “miR”, “gliomagenesis”    | Avoid unless necessary |
+| **Redundancy**          | “illustrate/demonstrate”  | Choose one             |
+| **Weak adverbs**        | “very, really, quite”     | Eliminate              |
 
 > [!tip]
 > Replace negatives with concise positives:  

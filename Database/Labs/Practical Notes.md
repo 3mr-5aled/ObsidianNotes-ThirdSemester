@@ -1,0 +1,12 @@
+- **Arithmetic expressions** containing a null value evaluate to null.
+- **A column alias:** 
+	- The optional AS keyword may be used between the column name and alias
+	- Requires double quotation marks if it contains spaces or special characters (such as # or $), or is case sensitive
+- Character **strings** (case sensitive )and **date** (format sensitive) values are enclosed in single quotation marks.
+- `(BETWEEN...AND...) ,(IN(set)) , LIKE, IS NULL` other comparison conditions
+	- Values specified with the **BETWEEN** condition are **inclusive**. You must specify the **lower limit first**.
+	- **IN (100, 101 , 102)**  multivalued 
+	- `LIKE '%S_'` , **%** zero or many chars, **_** one char.
+	- **IS NULL** test for nulls
+- To join **n** tables together, you need a minimum of **n-1** join conditions.
+- If a table alias is used for a particular table name in the FROM clause, then that table alias must be substituted for the table name throughout the SELECT statement.

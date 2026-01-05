@@ -89,14 +89,14 @@ It now extends these skills into **Computer Science proposal writing** and **tea
 - A brief personal introduction and purpose.
 - The **action** you expect after reading (e.g., scheduling a meeting).
 - Include **contact information**.
-![[Pasted image 20251113220235.png]]
+![[Pasted image 20260105200057.png]]
 ### **2. Title Page**
 - Project title and organization.
 - Example titles:
   - *Streamlining Our Order Process*
   - *Candy Crush Project*
   - *Converting XYZ’s Fleet to Hybrid Vehicles*
-![[Pasted image 20251113220301.png]]
+![[Pasted image 20260105200048.png]]
 ### **3. Suggested Content**
 
 #### **I. Introduction**
@@ -198,9 +198,9 @@ It now extends these skills into **Computer Science proposal writing** and **tea
 
 2. **Record Taking**
    Include:
-   - Purpose, date, time, and participants.
-   - **Decisions and actions** on each agenda item.
-   - **Next steps**, **votes**, and **next meeting date**.
+	- Purpose, date, time, and participants.
+	- **Decisions and actions** on each agenda item.
+	- **Next steps**, **votes**, and **next meeting date**.
 
 3. **Transcribing**
    - Prepare a **clean formatted document** summarizing the key points.
@@ -226,9 +226,8 @@ It now extends these skills into **Computer Science proposal writing** and **tea
 > Mnemonic for MoM steps: **P-R-T-D-S**  
 > **P**re-planning → **R**ecord-taking → **T**ranscribing → **D**istributing → **S**toring.
 
-![[Pasted image 20251113224007.png]]
-![[Pasted image 20251113224015.png]]
-![[Pasted image 20251113224021.png]]
+![[Pasted image 20260105224948.png]]![[Pasted image 20260105224956.png]]
+![[Pasted image 20260105225004.png]]
 
 ---
 

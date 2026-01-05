@@ -3,9 +3,9 @@ course: Report Writing
 lecture: Presentation Skills
 date: 2025-11-13
 tags:
-  - report writing
+  - report-writing
   - presentation
-  - soft skills
+  - soft-skills
   - university
   - notes
 ---

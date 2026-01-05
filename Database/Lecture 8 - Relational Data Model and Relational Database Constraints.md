@@ -300,10 +300,11 @@ Possible actions:
 
 ## 12.3 UPDATE Violations
 
-Updating:
-- PK → similar to DELETE + INSERT  
-- FK → may violate referential integrity  
-- Ordinary attribute → may violate domain constraints
+> [!WARNING]
+> Updating:
+> - PK → similar to DELETE + INSERT  
+> - FK → may violate referential integrity  
+> - Ordinary attribute → may violate domain constraints
 
 🟡 Intermediate
 
