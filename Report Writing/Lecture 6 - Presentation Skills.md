@@ -55,6 +55,7 @@ This lecture builds on **Soft Skills** and **Technical Writing** topics. Present
 > - **I**ntent – Clarify your goal  
 > - **M**aterials – Prepare visuals and data  
 
+**Questions to Ask Yourself:**
 - What is the **aim**?
 	- What are the **main points** I want to make?
 - What is my **title**?
@@ -73,8 +74,8 @@ This lecture builds on **Soft Skills** and **Technical Writing** topics. Present
 > Proper planning shapes clarity and delivery.
 
 Steps:
-1. Write your main **argument or conclusion**.
-2. Outline **key points as bullet notes**.
+1. Write your **main argument or conclusion**.
+2. Outline **key points as heading bullet notes**.
 3. **Visit the room**; test equipment.
 4. **Time** your presentation.
 5. Check event **dress code**.
@@ -85,9 +86,9 @@ Steps:
 
 > [!note]
 > Use the **3-T Rule**:
-> >  - Tell them what you will tell them (Introduction),
-> >  - tell them (development),
-> >  - tell them what you told them. (conclusion)
+> >  - Tell them what you will tell them *(Introduction)*,
+> >  - tell them *(development)*,
+> >  - tell them what you told them. *(conclusion)*
 
 **Phases:**
 1. **Introduction** – Announce purpose and scope.  
@@ -111,7 +112,7 @@ Essential Steps:
 > - “Good morning, ladies and gentlemen. Today, I’d like to discuss our success in the Egyptian AI market.”  
 > - “Perhaps we can leave questions until the end.”  
 
-![[Pasted image 20251113213046.png]]
+![[Pasted image 20260105225756.png]]
 
 ---
 
@@ -125,7 +126,7 @@ Essential Steps:
 - “Going back to…” – Reference earlier point  
 - “If I could just summarize…” – Recap main ideas  
 - “I’d like to conclude by leaving you with this thought…” – Close strongly  
-![[Pasted image 20251113213216.png]]
+![[Pasted image 20260105230003.png]]
 
 > [!tip]
 > Mnemonic: **S.T.E.P.**
@@ -144,7 +145,11 @@ Essential Steps:
 **Key factors:**
 - **Content:** All data must support the objective.  
 - **Quantity:** Be concise yet complete.  
-- **Sequence:** Choose structure—**logical**, **chronological**, **known-to-unknown**, or **problem-solution**.  
+- **Sequence:** Choose structure
+	**Logical**
+	**Chronological**
+	**Known-to-unknown**
+	**Problem/Solution**.  
 
 ---
 
@@ -158,6 +163,8 @@ Steps:
 2. End with **appreciation**.  
 3. Finish **positively** or **motivationally**.  
 
+>The end should be on a strong or positive note.
+
 > [!example]
 > “Thank you for your attention. Let’s continue creating solutions that matter.”
 
@@ -168,11 +175,11 @@ Steps:
 > [!note]
 > The first 60 seconds determine engagement.
 
-> The average attention span of an average listener is **5-10 minutes** for any single unbroken subject.
+> The average attention span of an average listener is **5-10 minutes** for any **single unbroken subject**.
 
 ##### Strategies:
 - Relate the topic to the audience’s lives.  
-- Make it **personal**.  
+- **Make it personal**.  
 - Break long sections every **5–10 minutes**.  
 
 ##### Tips for capturing attention
@@ -222,9 +229,7 @@ They create dialogue and provoke thought.
 - **Movement** to emphasize transition.
 
 **Negative:**
-- Avoid swaying, fidgeting, or turning your back.  
-- Don’t keep hands in pockets.
-- **Loss of eye contact**.
+- **Loss** of **eye contact**.
 - **Don't stare,** or look blankly into people's eyes.
 - **Swaying back and forth.**
 - **Back turned** to the audience.
@@ -262,7 +267,7 @@ Guidelines:
 - **Irrelevant:** Redirect politely.  
 - **Repeated:** Summarize and move on.  
 - **Don’t know:** Admit honestly and offer to follow up.
-
+![[Pasted image 20260105232844.png]]
 ---
 
 ## 👥 Group Presentations
@@ -308,9 +313,9 @@ Guidelines:
 ## 📝 Tips for PowerPoint Presentation 
 - Keep it Simple
 - Choose readable colors and fonts
-	![[Pasted image 20251113214845.png]]
+	![[Pasted image 20260105233039.png]]
 - No Paragraphs
-	![[Pasted image 20251113214903.png]]
+	![[Pasted image 20260105233057.png]]
  - Don't overload your presentation with animations
 
 
